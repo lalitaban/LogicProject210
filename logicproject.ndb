@@ -1,0 +1,170 @@
+NDB006
+The number of symbol table entries is: 2
+The length of the symbol table is: 27
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|sevenseg:s1|
+
+The number of name info structs is : 157
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	6	0	:10	x
+#	IeEA	!	6	0	:11	y
+$	IeEA	!	6	0	:8	v
+%	IeEA	!	6	0	:9	w
+&	"<R?c	!	2	0	sevensegment0	!	sevensegment0	u
+'	"<R?c	!	2	0	sevensegment1	!	sevensegment1	t
+(	"<R?c	!	2	0	sevensegment2	!	sevensegment2	s
+)	"<R?c	!	2	0	sevensegment3	!	sevensegment3	r
+*	"<R?c	!	2	0	sevensegment4	!	sevensegment4	q
++	"<R?c	!	2	0	sevensegment5	!	sevensegment5	p
+,	"<R?c	!	2	0	sevensegment6	!	sevensegment6	o
+-	IeEA	.	27	0	:100	#3
+.	IeEA	.	27	0	:101	#4
+/	IeEA	.	27	0	:102	#5
+0	IeEA	.	27	0	:103	#6
+1	IeEA	.	27	0	:104	#7
+2	IeEA	.	27	0	:105	#8
+3	IeEA	.	27	0	:106	#9
+4	IeEA	.	27	0	:107	#:
+5	IeEA	.	28	0	:108	#;
+6	IeEA	.	28	0	:109	#<
+7	IeEA	.	28	0	:110	#=
+8	IeEA	.	28	0	:111	#>
+9	IeEA	.	28	0	:112	#?
+:	IeEA	.	28	0	:113	#@
+;	IeEA	.	28	0	:114	#A
+<	IeEA	.	28	0	:115	#B
+=	IeEA	.	28	0	:116	#C
+>	IeEA	.	28	0	:117	#D
+?	IeEA	.	28	0	:118	#E
+@	IeEA	.	28	0	:119	#F
+A	IeEA	.	20	0	:12	"9
+B	IeEA	.	28	0	:120	#G
+C	IeEA	.	29	0	:121	#H
+D	IeEA	.	29	0	:122	#I
+E	IeEA	.	29	0	:123	#J
+F	IeEA	.	29	0	:124	#K
+G	IeEA	.	29	0	:125	#L
+H	IeEA	.	29	0	:126	#M
+I	IeEA	.	29	0	:127	#N
+J	IeEA	.	29	0	:128	#O
+K	IeEA	.	29	0	:129	#P
+L	IeEA	.	20	0	:13	":
+M	IeEA	.	29	0	:130	#Q
+N	IeEA	.	29	0	:131	#R
+O	IeEA	.	29	0	:132	#S
+P	IeEA	.	29	0	:133	#T
+Q	IeEA	.	20	0	:134	#U
+R	IeEA	.	20	0	:135	#V
+S	IeEA	.	20	0	:136	#W
+T	IeEA	.	20	0	:137	#X
+U	IeEA	.	20	0	:138	#Y
+V	IeEA	.	20	0	:139	#Z
+W	IeEA	.	20	0	:14	";
+X	IeEA	.	20	0	:140	#[
+Y	IeEA	.	20	0	:141	#\
+Z	IeEA	.	20	0	:142	#]
+[	IeEA	.	31	0	:143	#^
+\	IeEA	.	31	0	:144	#_
+]	IeEA	.	31	0	:145	#`
+^	IeEA	.	31	0	:146	#a
+_	IeEA	.	31	0	:147	#b
+`	IeEA	.	31	0	:148	#c
+a	IeEA	.	31	0	:149	#d
+b	IeEA	.	20	0	:15	"<
+c	IeEA	.	31	0	:150	#e
+d	IeEA	.	31	0	:151	#f
+e	IeEA	.	31	0	:152	#g
+f	IeEA	.	31	0	:153	#h
+g	IeEA	.	31	0	:154	#i
+h	IeEA	.	31	0	:155	#j
+i	IeEA	.	31	0	:156	#k
+j	IeEA	.	31	0	:157	#l
+k	IeEA	.	20	0	:16	"=
+l	IeEA	.	20	0	:17	">
+m	IeEA	.	20	0	:18	"?
+n	IeEA	.	20	0	:19	"@
+o	IeEA	.	20	0	:20	"A
+p	IeEA	.	20	0	:21	"B
+q	IeEA	.	20	0	:22	"C
+r	IeEA	.	20	0	:23	"D
+s	IeEA	.	21	0	:24	"E
+t	IeEA	.	21	0	:25	"F
+u	IeEA	.	21	0	:26	"G
+v	IeEA	.	21	0	:27	"H
+w	IeEA	.	21	0	:28	"I
+x	IeEA	.	21	0	:29	"J
+y	IeEA	.	21	0	:30	"K
+z	IeEA	.	21	0	:31	"L
+{	IeEA	.	21	0	:32	"M
+|	IeEA	.	21	0	:33	"N
+}	IeEA	.	21	0	:34	"O
+~	IeEA	.	21	0	:35	"P
+"!	IeEA	.	22	0	:36	"Q
+""	IeEA	.	22	0	:37	"R
+"#	IeEA	.	22	0	:38	"S
+"$	IeEA	.	22	0	:39	"T
+"%	IeEA	.	22	0	:40	"U
+"&	IeEA	.	22	0	:41	"V
+"'	IeEA	.	22	0	:42	"W
+"(	IeEA	.	22	0	:43	"X
+")	IeEA	.	22	0	:44	"Y
+"*	IeEA	.	22	0	:45	"Z
+"+	IeEA	.	22	0	:46	"[
+",	IeEA	.	22	0	:47	"\
+"-	IeEA	.	23	0	:48	"]
+".	IeEA	.	23	0	:49	"^
+"/	IeEA	.	23	0	:50	"_
+"0	IeEA	.	23	0	:51	"`
+"1	IeEA	.	23	0	:52	"a
+"2	IeEA	.	23	0	:53	"b
+"3	IeEA	.	23	0	:54	"c
+"4	IeEA	.	23	0	:55	"d
+"5	IeEA	.	23	0	:56	"e
+"6	IeEA	.	23	0	:57	"f
+"7	IeEA	.	23	0	:58	"g
+"8	IeEA	.	23	0	:59	"h
+"9	IeEA	.	24	0	:60	"i
+":	IeEA	.	24	0	:61	"j
+";	IeEA	.	24	0	:62	"k
+"<	IeEA	.	24	0	:63	"l
+"=	IeEA	.	24	0	:64	"m
+">	IeEA	.	24	0	:65	"n
+"?	IeEA	.	24	0	:66	"o
+"@	IeEA	.	24	0	:67	"p
+"A	IeEA	.	24	0	:68	"q
+"B	IeEA	.	24	0	:69	"r
+"C	IeEA	.	24	0	:70	"s
+"D	IeEA	.	24	0	:71	"t
+"E	IeEA	.	25	0	:72	"u
+"F	IeEA	.	25	0	:73	"v
+"G	IeEA	.	25	0	:74	"w
+"H	IeEA	.	25	0	:75	"x
+"I	IeEA	.	25	0	:76	"y
+"J	IeEA	.	25	0	:77	"z
+"K	IeEA	.	25	0	:78	"{
+"L	IeEA	.	25	0	:79	"|
+"M	IeEA	.	25	0	:80	"}
+"N	IeEA	.	25	0	:81	"~
+"O	IeEA	.	25	0	:82	#!
+"P	IeEA	.	25	0	:83	#"
+"Q	IeEA	.	26	0	:84	##
+"R	IeEA	.	26	0	:85	#$
+"S	IeEA	.	26	0	:86	#%
+"T	IeEA	.	26	0	:87	#&
+"U	IeEA	.	26	0	:88	#'
+"V	IeEA	.	26	0	:89	#(
+"W	IeEA	.	26	0	:90	#)
+"X	IeEA	.	26	0	:91	#*
+"Y	IeEA	.	26	0	:92	#+
+"Z	IeEA	.	26	0	:93	#,
+"[	IeEA	.	26	0	:94	#-
+"\	IeEA	.	26	0	:95	#.
+"]	IeEA	.	27	0	:96	#/
+"^	IeEA	.	27	0	:97	#0
+"_	IeEA	.	27	0	:98	#1
+"`	IeEA	.	27	0	:99	#2
