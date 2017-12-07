@@ -34,3 +34,27 @@ module sevenseg(out,in);
 
 
 endmodule
+
+
+
+
+module state_counter(state, trigger);
+  output [3:0]state;
+  input trigger;
+  reg [3:0]state;
+  always @ (posedge trigger) begin
+    case(state)
+      0: state = 1;
+      1: state = 2;
+      2: state = 3;
+      3: state = 4;
+      4: state = 5;
+      5: state = 6;
+      6: state = 7;
+      7: state = 8;
+      8: state = 9;
+      9: state = 0;
+      default: state = 0;
+    endcase
+  end
+endmodule
