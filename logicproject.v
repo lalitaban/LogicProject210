@@ -35,9 +35,6 @@ module sevenseg(out,in);
 
 endmodule
 
-
-
-
 module state_counter(state, trigger);
   output [3:0]state;
   input trigger;
@@ -57,4 +54,109 @@ module state_counter(state, trigger);
       default: state = 0;
     endcase
   end
+endmodule
+
+
+module question_show(num_left,num_right,operater,switch,state);
+  input [3:0]state;
+  output [3:0]num_left,[3:0]num_right,[3:0]operater;
+
+  reg [3:0]num_left,[3:0]num_right,[3:0]operater;
+
+  always @ (state) begin
+  if (switch == 0) begin
+    if (state == 0) begin
+      num_left = 8;
+      num_right = 2;
+      operater = 4'b1000;
+    end
+    else if (state == 1) begin
+      num_left = 2;
+      num_right = 3;
+      operater = 4'b0100;
+    end
+    else if (state == 2) begin
+      num_left = 9;
+      num_right = 2;
+      operater = 4'b0010;
+    end
+    else if (state == 3) begin
+      num_left = 5;
+      num_right = 3;
+      operater = 4'b0001;
+    end
+    else if (state == 4) begin
+      num_left = 4;
+      num_right = 5;
+      operater = 4'b0001;
+    end
+    else if (state == 5) begin
+      num_left = 9;
+      num_right = 3;
+      operater = 4'b1000;
+    end
+    else if (state == 6) begin
+      num_left = 6;
+      num_right = 3;
+      operater = 4'b0001;
+    end
+    else if (state == 7) begin
+      num_left = 1;
+      num_right = 1;
+      operater = 4'b1000;
+    end
+    else if (state == 8) begin
+      num_left = 6;
+      num_right = 4;
+      operater = 4'b0010;
+    end
+  end
+  else if (switch == 1) begin
+    if (state == 0) begin
+      num_left = 8;
+      num_right = 2;
+      operater = 4'b1000;
+    end
+    else if (state == 1) begin
+      num_left = 2;
+      num_right = 3;
+      operater = 4'b0100;
+    end
+    else if (state == 2) begin
+      num_left = 9;
+      num_right = 2;
+      operater = 4'b0010;
+    end
+    else if (state == 3) begin
+      num_left = 5;
+      num_right = 3;
+      operater = 4'b0001;
+    end
+    else if (state == 4) begin
+      num_left = 4;
+      num_right = 5;
+      operater = 4'b0001;
+    end
+    else if (state == 5) begin
+      num_left = 9;
+      num_right = 3;
+      operater = 4'b1000;
+    end
+    else if (state == 6) begin
+      num_left = 6;
+      num_right = 3;
+      operater = 4'b0001;
+    end
+    else if (state == 7) begin
+      num_left = 1;
+      num_right = 1;
+      operater = 4'b1000;
+    end
+    else if (state == 8) begin
+      num_left = 6;
+      num_right = 4;
+      operater = 4'b0010;
+    end
+  end
+
 endmodule
