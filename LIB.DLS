@@ -1,4 +1,8 @@
 DLSL
 1
 logicproject.VerilogView U3146069.DLS
+question_show.VerilogView U7537880.DLS
+score.VerilogView U5782287.DLS
+score_counter.VerilogView U9738391.DLS
 sevenseg.VerilogView U8200613.DLS
+state_counter.VerilogView U2739494.DLS

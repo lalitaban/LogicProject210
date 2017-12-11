@@ -26,13 +26,29 @@ FILES
 {
 	logicproject.v
 	{
-		sevenseg [] []
+		score [] []
 		{
-			1 [] [];
+			5 [] [];
+		}
+		question_show [] []
+		{
+			4 [] [];
+		}
+		state_counter [] []
+		{
+			3 [] [];
+		}
+		score_counter [] []
+		{
+			2 [] [];
 		}
 		logicproject [] []
 		{
 			0 [] [];
+		}
+		sevenseg [] []
+		{
+			1 [] [];
 		}
 	}
 }
@@ -40,6 +56,6 @@ TREE
 {
 	logicproject::(0,0):(0): logicproject.v
 	{
-		sevenseg:1:(8,0):(12,s1): logicproject.v;
+		sevenseg:1:(7,0):(12,s1): logicproject.v;
 	}
 }

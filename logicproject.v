@@ -8,7 +8,7 @@ module logicproject(sevensegment);
 
 endmodule
 
-module sevenseg(out,in); //showโจทย์
+module sevenseg(out,in); //show question
   input [3:0]in;
   output [6:0]out;
 
@@ -35,6 +35,12 @@ module sevenseg(out,in); //showโจทย์
 
 endmodule
 
+module score_counter(score_out,trigger);//นับคะแนน
+  input trigger;
+  output [4:0]score_out;
+  reg [4:0]score_out;
+endmodule
+
 module state_counter(state, trigger); //นับstate
   output [3:0]state;
   input trigger;
@@ -59,12 +65,17 @@ endmodule
 
 module question_show(num_left,num_right,operater,switch,state);
   input [3:0]state;
-  output [3:0]num_left,[3:0]num_right,[3:0]operater;
+  input switch;
+  output [3:0]num_left;
+  output [3:0]num_right;
+  output [3:0]operater;
 
-  reg [3:0]num_left,[3:0]num_right,[3:0]operater;
+  reg [3:0]num_left;
+  reg [3:0]num_right;
+  reg [3:0]operater;
 
   always @ (state) begin
-  if (switch == 0) begin //คำถามชุด1
+  if (switch == 0) begin //q1
     if (state == 0) begin
       num_left = 8;
       num_right = 2;
@@ -111,7 +122,7 @@ module question_show(num_left,num_right,operater,switch,state);
       operater = 4'b0010;
     end
   end
-  else if (switch == 1) begin //คำถามชุด2
+  else if (switch == 1) begin //q2
     if (state == 0) begin
       num_left = 8;
       num_right = 2;
@@ -158,11 +169,14 @@ module question_show(num_left,num_right,operater,switch,state);
       operater = 4'b0010;
     end
   end
-
+end
 endmodule
 
-module score(state,selector,joy_left,joy_right);
-  input [3:0]state,selector,[8:0]joy_left,[8:0]joy_right;
+module score(score_left,score_right,selector,trigger,joy_left,joy_right,state,selector);
+  input [3:0]state;
+  input selector;
+  input [8:0]joy_left;
+  input [8:0]joy_right;
 
   output trigger,score_left,score_right;
   reg trigger,score_left,score_right;
@@ -172,222 +186,4 @@ module score(state,selector,joy_left,joy_right);
   or orjoy_left(joy_left_status,joy_left[0],joy_left[1],joy_left[2],joy_left[3],joy_left[4],joy_left[5],joy_left[6],joy_left[7],joy_left[8]);
   or orjoy_right(joy_right_status,joy_right[0],joy_right[1],joy_right[2],joy_right[3],joy_right[4],joy_right[5],joy_right[6],joy_right[7],joy_right[8]);
 
-  if (joy_left_status == 1) begin
-    if (selector == 0) begin//คำตอบโจทย์ชุด1
-      if (joy_left == 9'b000001000 && state == 0) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000100000 && state == 1) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b001000000 && state == 2) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b010000000 && state == 3) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b100000000 && state == 4) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000000100 && state == 5) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b100000000 && state == 6) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000000001 && state == 7) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000000010 && state == 8) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else begin
-      trigger = 0;
-      score_left = 0;
-      score_right = 0;
-      end
-
-    end
-    else if if (selector == 1) begin/// คำตอบโจทย์ชุด2
-      if (joy_left == 9'b000001000 && state == 0) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000100000 && state == 1) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b001000000 && state == 2) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b010000000 && state == 3) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b100000000 && state == 4) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000000100 && state == 5) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b100000000 && state == 6) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000000001 && state == 7) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else if (joy_left == 9'b000000010 && state == 8) begin
-        trigger = 1;
-        score_left = 1;
-        score_right = 0;
-      end
-      else begin
-      trigger = 0;
-      score_left = 0;
-      score_right = 0;
-      end
-
-    end
-
-  end
-  else if (joy_right_status == 1) begin
-    if (selector == 0) begin//คำตอบโจทย์ชุด1
-      if (joy_right == 9'b000001000 && state == 0) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000100000 && state == 1) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b001000000 && state == 2) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b010000000 && state == 3) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b100000000 && state == 4) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000000100 && state == 5) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b100000000 && state == 6) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000000001 && state == 7) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000000010 && state == 8) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else begin
-      trigger = 0;
-      score_left = 0;
-      score_right = 0;
-      end
-
-    end
-    else if if (selector == 1) begin/// คำตอบโจทย์ชุด2
-      if (joy_right == 9'b000001000 && state == 0) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000100000 && state == 1) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b001000000 && state == 2) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b010000000 && state == 3) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b100000000 && state == 4) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000000100 && state == 5) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b100000000 && state == 6) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000000001 && state == 7) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else if (joy_right == 9'b000000010 && state == 8) begin
-        trigger = 1;
-        score_left = 0;
-        score_right = 1;
-      end
-      else begin
-      trigger = 0;
-      score_left = 0;
-      score_right = 0;
-      end
-
-    end
-
-  end
 endmodule
