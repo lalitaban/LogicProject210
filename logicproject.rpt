@@ -2,7 +2,7 @@ Project Information                        e:\logicproject210\logicproject.rpt
 
 MAX+plus II Compiler Report File
 Version 10.2 07/10/2002
-Compiled: 12/11/2017 23:57:38
+Compiled: 12/12/2017 00:55:35
 
 Copyright (C) 1988-2002 Altera Corporation
 Any megafunction design, and related net list (encrypted or decrypted),
@@ -37,23 +37,10 @@ Chip/                     Input   Output   Bidir         Shareable
 POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
 
 logicproject
-      EPM7128SLC84-15      0        7        0      7       0           5  %
+      EPM7128SLC84-15      19       28       0      82      57          64 %
 
-User Pins:                 0        7        0  
+User Pins:                 19       28       0  
 
-
-
-Project Information                        e:\logicproject210\logicproject.rpt
-
-** PROJECT COMPILATION MESSAGES **
-
-Warning: Primitive 'sevensegment6' is stuck at VCC
-Warning: Primitive 'sevensegment5' is stuck at VCC
-Warning: Primitive 'sevensegment4' is stuck at GND
-Warning: Primitive 'sevensegment3' is stuck at GND
-Warning: Primitive 'sevensegment2' is stuck at VCC
-Warning: Primitive 'sevensegment1' is stuck at VCC
-Warning: Primitive 'sevensegment0' is stuck at GND
 
 
 Project Information                        e:\logicproject210\logicproject.rpt
@@ -64,13 +51,13 @@ Project Information                        e:\logicproject210\logicproject.rpt
     User       Assignments                
 Assignments   (if different)     Node Name
 
-logicproject@33                   sevensegment0
-logicproject@34                   sevensegment1
-logicproject@35                   sevensegment2
-logicproject@36                   sevensegment3
-logicproject@37                   sevensegment4
-logicproject@39                   sevensegment5
-logicproject@40                   sevensegment6
+logicproject@33                   seg_left0
+logicproject@34                   seg_left1
+logicproject@35                   seg_left2
+logicproject@36                   seg_left3
+logicproject@37                   seg_left4
+logicproject@39                   seg_left5
+logicproject@40                   seg_left6
 
 
 Project Information                        e:\logicproject210\logicproject.rpt
@@ -79,7 +66,13 @@ Project Information                        e:\logicproject210\logicproject.rpt
 
 
 
-|sevenseg:s1|
+|score:check1|
+|state_counter:state_c|
+|question_show:qs|
+|sevenseg:segL|
+|sevenseg:segR|
+|score_counter:scL|
+|score_counter:scR|
 
 
 Device-Specific Information:               e:\logicproject210\logicproject.rpt
@@ -99,57 +92,55 @@ Device Options:
     User Code                                  = ffff
     MultiVolt I/O                              = OFF
 
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                                                                                  
-                   R  R  R  R     R  R  R                    R  R  R     R  R  R  
-                   E  E  E  E     E  E  E                    E  E  E     E  E  E  
-                   S  S  S  S     S  S  S  V                 S  S  S     S  S  S  
-                   E  E  E  E     E  E  E  C                 E  E  E  V  E  E  E  
-                   R  R  R  R     R  R  R  C                 R  R  R  C  R  R  R  
-                   V  V  V  V  G  V  V  V  I  G  G  G  G  G  V  V  V  C  V  V  V  
-                   E  E  E  E  N  E  E  E  N  N  N  N  N  N  E  E  E  I  E  E  E  
-                   D  D  D  D  D  D  D  D  T  D  D  D  D  D  D  D  D  O  D  D  D  
-                 -----------------------------------------------------------------_ 
-               /  11 10  9  8  7  6  5  4  3  2  1 84 83 82 81 80 79 78 77 76 75   | 
-     RESERVED | 12                                                              74 | RESERVED 
-        VCCIO | 13                                                              73 | RESERVED 
-         #TDI | 14                                                              72 | GND 
-     RESERVED | 15                                                              71 | #TDO 
-     RESERVED | 16                                                              70 | RESERVED 
-     RESERVED | 17                                                              69 | RESERVED 
-     RESERVED | 18                                                              68 | RESERVED 
-          GND | 19                                                              67 | RESERVED 
-     RESERVED | 20                                                              66 | VCCIO 
-     RESERVED | 21                                                              65 | RESERVED 
-     RESERVED | 22                       EPM7128SLC84-15                        64 | RESERVED 
-         #TMS | 23                                                              63 | RESERVED 
-     RESERVED | 24                                                              62 | #TCK 
-     RESERVED | 25                                                              61 | RESERVED 
-        VCCIO | 26                                                              60 | RESERVED 
-     RESERVED | 27                                                              59 | GND 
-     RESERVED | 28                                                              58 | RESERVED 
-     RESERVED | 29                                                              57 | RESERVED 
-     RESERVED | 30                                                              56 | RESERVED 
-     RESERVED | 31                                                              55 | RESERVED 
-          GND | 32                                                              54 | RESERVED 
-              |_  33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53  _| 
-                ------------------------------------------------------------------ 
-                   s  s  s  s  s  V  s  s  R  G  V  R  R  R  G  R  R  R  R  R  V  
-                   e  e  e  e  e  C  e  e  E  N  C  E  E  E  N  E  E  E  E  E  C  
-                   v  v  v  v  v  C  v  v  S  D  C  S  S  S  D  S  S  S  S  S  C  
-                   e  e  e  e  e  I  e  e  E     I  E  E  E     E  E  E  E  E  I  
-                   n  n  n  n  n  O  n  n  R     N  R  R  R     R  R  R  R  R  O  
-                   s  s  s  s  s     s  s  V     T  V  V  V     V  V  V  V  V     
-                   e  e  e  e  e     e  e  E        E  E  E     E  E  E  E  E     
-                   g  g  g  g  g     g  g  D        D  D  D     D  D  D  D  D     
-                   m  m  m  m  m     m  m                                         
-                   e  e  e  e  e     e  e                                         
-                   n  n  n  n  n     n  n                                         
-                   t  t  t  t  t     t  t                                         
-                   0  1  2  3  4     5  6                                         
+                                                                                 
+                                                                                 
+                           j                                s           j  s  s  
+                  j  j  j  o     j  j  j                    e           o  e  e  
+                  o  o  o  y     o  o  o                    g  R  R     y  g  g  
+                  y  y  y  _     y  y  y                    _  E  E     _  _  _  
+                  _  _  _  r     _  _  _  V                 r  S  S     r  r  r  
+                  l  l  l  i     l  l  l  C                 i  E  E  V  i  i  i  
+                  e  e  e  g     e  e  e  C                 g  R  R  C  g  g  g  
+                  f  f  f  h  G  f  f  f  I  G  G  G  G  G  h  V  V  C  h  h  h  
+                  t  t  t  t  N  t  t  t  N  N  N  N  N  N  t  E  E  I  t  t  t  
+                  0  1  2  5  D  3  8  7  T  D  D  D  D  D  0  D  D  O  4  1  3  
+                -----------------------------------------------------------------_ 
+              /  11 10  9  8  7  6  5  4  3  2  1 84 83 82 81 80 79 78 77 76 75   | 
+    selector | 12                                                              74 | seg_right2 
+       VCCIO | 13                                                              73 | seg_right4 
+        #TDI | 14                                                              72 | GND 
+   joy_left4 | 15                                                              71 | #TDO 
+   joy_left5 | 16                                                              70 | seg_right6 
+  joy_right0 | 17                                                              69 | RESERVED 
+  joy_right1 | 18                                                              68 | RESERVED 
+         GND | 19                                                              67 | seg_right5 
+  joy_right7 | 20                                                              66 | VCCIO 
+   joy_left6 | 21                                                              65 | RESERVED 
+  joy_right6 | 22                       EPM7128SLC84-15                        64 | RESERVED 
+        #TMS | 23                                                              63 | RESERVED 
+    RESERVED | 24                                                              62 | #TCK 
+   operator1 | 25                                                              61 | score_right4 
+       VCCIO | 26                                                              60 | score_left4 
+    RESERVED | 27                                                              59 | GND 
+  joy_right3 | 28                                                              58 | score_left0 
+score_right3 | 29                                                              57 | score_right2 
+score_right0 | 30                                                              56 | score_left2 
+  joy_right8 | 31                                                              55 | score_left1 
+         GND | 32                                                              54 | score_right1 
+             |_  33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53  _| 
+               ------------------------------------------------------------------ 
+                  s  s  s  s  s  V  s  s  R  G  V  o  o  o  G  j  R  R  s  R  V  
+                  e  e  e  e  e  C  e  e  E  N  C  p  p  p  N  o  E  E  c  E  C  
+                  g  g  g  g  g  C  g  g  S  D  C  e  e  e  D  y  S  S  o  S  C  
+                  _  _  _  _  _  I  _  _  E     I  r  r  r     _  E  E  r  E  I  
+                  l  l  l  l  l  O  l  l  R     N  a  a  a     r  R  R  e  R  O  
+                  e  e  e  e  e     e  e  V     T  t  t  t     i  V  V  _  V     
+                  f  f  f  f  f     f  f  E        o  o  o     g  E  E  l  E     
+                  t  t  t  t  t     t  t  D        r  r  r     h  D  D  e  D     
+                  0  1  2  3  4     5  6           3  2  0     t        f        
+                                                               2        t        
+                                                                        3        
+                                                                                 
 
 
 N.C. = No Connect. This pin has no internal connection to the device.
@@ -175,37 +166,37 @@ logicproject
                                                 Shareable     External
 Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
 
-A:     LC1 - LC16     0/16(  0%)   0/ 8(  0%)   0/16(  0%)   0/36(  0%) 
-B:    LC17 - LC32     0/16(  0%)   1/ 8( 12%)   0/16(  0%)   0/36(  0%) 
-C:    LC33 - LC48     0/16(  0%)   1/ 8( 12%)   0/16(  0%)   0/36(  0%) 
-D:    LC49 - LC64     7/16( 43%)   7/ 8( 87%)   0/16(  0%)   0/36(  0%) 
-E:    LC65 - LC80     0/16(  0%)   0/ 8(  0%)   0/16(  0%)   0/36(  0%) 
-F:    LC81 - LC96     0/16(  0%)   1/ 8( 12%)   0/16(  0%)   0/36(  0%) 
-G:   LC97 - LC112     0/16(  0%)   1/ 8( 12%)   0/16(  0%)   0/36(  0%) 
-H:  LC113 - LC128     0/16(  0%)   0/ 8(  0%)   0/16(  0%)   0/36(  0%) 
+A:     LC1 - LC16     1/16(  6%)   8/ 8(100%)   7/16( 43%)  29/36( 80%) 
+B:    LC17 - LC32     0/16(  0%)   8/ 8(100%)   0/16(  0%)   0/36(  0%) 
+C:    LC33 - LC48    12/16( 75%)   6/ 8( 75%)  10/16( 62%)  22/36( 61%) 
+D:    LC49 - LC64    15/16( 93%)   7/ 8( 87%)   9/16( 56%)  31/36( 86%) 
+E:    LC65 - LC80    11/16( 68%)   5/ 8( 62%)  16/16(100%)  22/36( 61%) 
+F:    LC81 - LC96    15/16( 93%)   8/ 8(100%)  15/16( 93%)  32/36( 88%) 
+G:   LC97 - LC112    12/16( 75%)   3/ 8( 37%)  16/16(100%)  28/36( 77%) 
+H:  LC113 - LC128    16/16(100%)   6/ 8( 75%)  10/16( 62%)  22/36( 61%) 
 
 
 Total dedicated input pins used:                 0/4      (  0%)
-Total I/O pins used:                            11/64     ( 17%)
-Total logic cells used:                          7/128    (  5%)
-Total shareable expanders used:                  0/128    (  0%)
-Total Turbo logic cells used:                    7/128    (  5%)
-Total shareable expanders not available (n/a):   0/128    (  0%)
-Average fan-in:                                  0.00
-Total fan-in:                                     0
+Total I/O pins used:                            51/64     ( 79%)
+Total logic cells used:                         82/128    ( 64%)
+Total shareable expanders used:                 57/128    ( 44%)
+Total Turbo logic cells used:                   82/128    ( 64%)
+Total shareable expanders not available (n/a):  26/128    ( 20%)
+Average fan-in:                                  7.41
+Total fan-in:                                   608
 
-Total input pins required:                       0
+Total input pins required:                      19
 Total fast input logic cells required:           0
-Total output pins required:                      7
+Total output pins required:                     28
 Total bidirectional pins required:               0
 Total reserved pins required                     4
-Total logic cells required:                      7
-Total flipflops required:                        0
-Total product terms required:                    7
+Total logic cells required:                     82
+Total flipflops required:                       14
+Total product terms required:                  332
 Total logic cells lending parallel expanders:    0
-Total shareable expanders in database:           0
+Total shareable expanders in database:          53
 
-Synthesized logic cells:                         0/ 128   (  0%)
+Synthesized logic cells:                        51/ 128   ( 39%)
 
 
 
@@ -214,6 +205,28 @@ logicproject
 
 ** INPUTS **
 
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  11    (5)  (A)      INPUT               0      0   0    0    0    0   11  joy_left0
+  10    (6)  (A)      INPUT               0      0   0    0    0    0   11  joy_left1
+   9    (8)  (A)      INPUT               0      0   0    0    0    0   11  joy_left2
+   6   (13)  (A)      INPUT               0      0   0    0    0    0   11  joy_left3
+  15   (29)  (B)      INPUT               0      0   0    0    0    0   11  joy_left4
+  16   (27)  (B)      INPUT               0      0   0    0    0    0   11  joy_left5
+  21   (19)  (B)      INPUT               0      0   0    0    0    0   11  joy_left6
+   4   (16)  (A)      INPUT               0      0   0    0    0    0   11  joy_left7
+   5   (14)  (A)      INPUT               0      0   0    0    0    0   11  joy_left8
+  17   (25)  (B)      INPUT               0      0   0    0    0    0    9  joy_right0
+  18   (24)  (B)      INPUT               0      0   0    0    0    0    9  joy_right1
+  48   (72)  (E)      INPUT               0      0   0    0    0    0    9  joy_right2
+  28   (40)  (C)      INPUT               0      0   0    0    0    0    9  joy_right3
+  77  (123)  (H)      INPUT               0      0   0    0    0    0    9  joy_right4
+   8   (11)  (A)      INPUT               0      0   0    0    0    0    9  joy_right5
+  22   (17)  (B)      INPUT               0      0   0    0    0    0    9  joy_right6
+  20   (21)  (B)      INPUT               0      0   0    0    0    0    9  joy_right7
+  31   (35)  (C)      INPUT               0      0   0    0    0    0    9  joy_right8
+  12    (3)  (A)      INPUT               0      0   0    0    0    4   23  selector
 
 
 Code:
@@ -224,8 +237,6 @@ t = Turbo logic cell
 / = Slow slew-rate output
 ! = NOT gate push-back
 r = Fitter-inserted logic cell
-            None.
-
 
 
 Device-Specific Information:               e:\logicproject210\logicproject.rpt
@@ -236,13 +247,108 @@ logicproject
                                          Shareable
                                          Expanders     Fan-In    Fan-Out
  Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
-  33     64    D     OUTPUT      t        0      0   0    0    0    0    0  sevensegment0
-  34     61    D     OUTPUT      t        0      0   0    0    0    0    0  sevensegment1
-  35     59    D     OUTPUT      t        0      0   0    0    0    0    0  sevensegment2
-  36     57    D     OUTPUT      t        0      0   0    0    0    0    0  sevensegment3
-  37     56    D     OUTPUT      t        0      0   0    0    0    0    0  sevensegment4
-  39     53    D     OUTPUT      t        0      0   0    0    0    0    0  sevensegment5
-  40     51    D     OUTPUT      t        0      0   0    0    0    0    0  sevensegment6
+  46     69    E     OUTPUT      t        3      2   1    1    6    0    0  operator0
+  25     45    C     OUTPUT      t        2      1   1    1    6    0    0  operator1
+  45     67    E     OUTPUT      t        1      1   0    1    6    0    0  operator2
+  44     65    E     OUTPUT      t        1      1   0    1    6    0    0  operator3
+  58     91    F         FF      t        1      0   1    0    6    5    0  score_left0
+  55     85    F         FF      t        0      0   0    0    6    5    0  score_left1
+  56     86    F         FF      t        0      0   0    0    6    5    0  score_left2
+  51     77    E         FF      t        0      0   0    0    5    4    0  score_left3
+  60     93    F         FF      t        0      0   0    0    6    5    0  score_left4
+  30     37    C         FF      t        1      0   1    0    6    5    0  score_right0
+  54     83    F         FF      t        0      0   0    0    6    5    0  score_right1
+  57     88    F         FF      t        0      0   0    0    6    5    0  score_right2
+  29     38    C         FF      t        0      0   0    0    5    4    0  score_right3
+  61     94    F         FF      t        0      0   0    0    6    5    0  score_right4
+  33     64    D     OUTPUT      t        0      0   0    0    4    0    0  seg_left0
+  34     61    D     OUTPUT      t        0      0   0    0    4    0    0  seg_left1
+  35     59    D     OUTPUT      t        0      0   0    0    4    0    0  seg_left2
+  36     57    D     OUTPUT      t        0      0   0    0    4    0    0  seg_left3
+  37     56    D     OUTPUT      t        0      0   0    0    4    0    0  seg_left4
+  39     53    D     OUTPUT      t        0      0   0    0    4    0    0  seg_left5
+  40     51    D     OUTPUT    s t        1      0   1    0    8    0    0  seg_left6
+  81    128    H     OUTPUT      t        0      0   0    0    4    0    0  seg_right0
+  76    120    H     OUTPUT      t        0      0   0    0    4    0    0  seg_right1
+  74    117    H     OUTPUT      t        0      0   0    0    4    0    0  seg_right2
+  75    118    H     OUTPUT      t        0      0   0    0    4    0    0  seg_right3
+  73    115    H     OUTPUT      t        0      0   0    0    4    0    0  seg_right4
+  67    104    G     OUTPUT      t        0      0   0    0    4    0    0  seg_right5
+  70    109    G     OUTPUT      t        0      0   0    0    4    0    0  seg_right6
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:               e:\logicproject210\logicproject.rpt
+logicproject
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+ (80)   126    H       SOFT    s t        0      0   0    0    4    0    3  |question_show:qs|~21~1
+ (64)    99    G      LCELL    s t        0      0   0    0    5    0    1  |question_show:qs|~366~1~2
+ (24)    46    C      LCELL    s t        1      0   1    0    5    7    1  |question_show:qs|~366~1
+   -     33    C      LCELL    s t        0      0   0    0    4    0    1  |question_show:qs|~367~1~2
+ (27)    43    C      LCELL    s t        1      0   1    0    6    7    2  |question_show:qs|~367~1
+   -     44    C      LCELL    s t        0      0   0    0    4    0    1  |question_show:qs|~368~1~2
+   -     36    C      LCELL    s t        1      0   1    0    6    7    2  |question_show:qs|~368~1
+   -     47    C      LCELL    s t        0      0   0    0    5    0    1  |question_show:qs|~369~1~2
+   -     34    C      LCELL    s t        1      0   1    0    6    7    2  |question_show:qs|~369~1
+ (77)   123    H      LCELL    s t        0      0   0    0    5    7    1  |question_show:qs|~593~1
+   -    119    H      LCELL    s t        0      0   0    0    5    7    1  |question_show:qs|~594~1
+ (79)   125    H      LCELL    s t        0      0   0    0    4    0    1  |question_show:qs|~595~1~2
+   -    121    H      LCELL    s t        1      0   1    0    6    7    2  |question_show:qs|~595~1
+   -    103    G      LCELL    s t        0      0   0    0    5    7    1  |question_show:qs|~596~1
+   -     89    F       SOFT    s t        1      0   1    0    5    1    2  |question_show:qs|~694~1
+ (48)    72    E       SOFT    s t        1      0   1    0    5    1    2  |question_show:qs|~695~1
+ (69)   107    G       SOFT    s t        0      0   0    0    5    0    2  |question_show:qs|~696~1
+   -     95    F       SOFT    s t        1      1   0    0    5    0    2  |question_show:qs|~697~1
+ (62)    96    F       SOFT    s t        1      0   1    1    5    1    0  |question_show:qs|~828~1
+   -     79    E       SOFT    s t        1      0   1    1    5    1    0  |question_show:qs|~829~1
+ (71)   112    G       SOFT    s t        0      0   0    1    5    1    0  |question_show:qs|~830~1
+   -     82    F       SOFT    s t        1      1   0    1    5    1    0  |question_show:qs|~831~1
+   -     92    F      LCELL    s t        1      1   0    1    6    0    1  |question_show:qs|~836~1~2
+   -     90    F      LCELL    s t        2      1   1    1    7    0    4  |question_show:qs|~836~1
+   -     68    E      LCELL    s t        4      2   1    1    7    0    1  |question_show:qs|~837~1~2
+   -     66    E      LCELL    s t        3      2   1    1    7    0    4  |question_show:qs|~837~1
+   -     42    C      LCELL    s t        3      2   1    1    6    0    1  |question_show:qs|~838~1~2
+   -     41    C      LCELL    s t        3      2   1    1    7    1    4  |question_show:qs|~838~1
+   -     74    E      LCELL    s t        5      4   1    1    7    0    1  |question_show:qs|~839~1~2
+   -     70    E      LCELL    s t        1      1   0    1    3    0    1  |question_show:qs|~839~1~3
+ (49)    73    E      LCELL    s t        4      3   1    1    6    1    4  |question_show:qs|~839~1
+ (68)   105    G       SOFT    s t        0      0   0    9    0    0    2  |score:check1|~27~1
+ (63)    97    G       SOFT    s t        1      1   0    9    0    0    3  |score:check1|~28~1
+   -     50    D       SOFT    s t        0      0   0    9    0    0    4  |score:check1|~33~1
+   -    108    G       SOFT    s t        0      0   0    9    4    0    1  |score:check1|~425~1
+   -     98    G       SOFT    s t        3      0   0   10    5    0    1  |score:check1|~591~1
+ (41)    49    D       SOFT    s t        1      0   1   10    4    0    1  |score:check1|~591~2
+   -     84    F       SOFT    s t        8      1   0   10    4    0    1  |score:check1|~781~1
+   -    122    H       SOFT    s t        1      0   0    9    2    0    1  |score:check1|~790~1
+   -     81    F      LCELL    s t        2      0   0    9    3    5    1  |score:check1|~794~1
+   -      2    A      LCELL    s t        7      0   0   19   10    5    1  |score:check1|~924~1
+   -     58    D       SOFT    s t        1      0   1   10    6    0    1  |score:check1|~924~2
+   -     55    D       SOFT    s t        1      0   1   10    6    0    1  |score:check1|~924~3
+   -    124    H       SOFT    s t        8      0   0   10    4    0    1  |score:check1|~952~1
+   -    100    G       SOFT    s t       12      1   0   10    7    0    1  |score:check1|~1042~1
+   -     63    D       SOFT    s t        1      0   1   10    4    0    1  |score:check1|~1042~2
+   -     54    D       SOFT    s t        3      0   0   10    5    0    1  |score:check1|~1045~1
+   -     62    D       SOFT    s t        1      0   1    9    4    0    1  |score:check1|~1045~2
+   -     60    D       SOFT    s t        0      0   0    9    1    0    1  |score:check1|~1049~1
+ (65)   101    G      LCELL    s t        1      1   0    9    5    0    6  |score:check1|~1054~1
+   -    116    H       DFFE      t        0      0   0    0    5    5   43  |state_counter:state_c|:108
+   -    127    H       DFFE      t        0      0   0    0    5    5   45  |state_counter:state_c|:109
+   -    113    H       DFFE      t        0      0   0    0    4    5   46  |state_counter:state_c|:110
+   -    114    H       DFFE      t        0      0   0    0    5    5   46  |state_counter:state_c|:111
 
 
 Code:
@@ -260,22 +366,403 @@ logicproject
 
 ** LOGIC CELL INTERCONNECTIONS **
 
-Logic Array Block 'D':
+Logic Array Block 'A':
 
-                       Logic cells placed in LAB 'D'
-        +------------- LC64 sevensegment0
-        | +----------- LC61 sevensegment1
-        | | +--------- LC59 sevensegment2
-        | | | +------- LC57 sevensegment3
-        | | | | +----- LC56 sevensegment4
-        | | | | | +--- LC53 sevensegment5
-        | | | | | | +- LC51 sevensegment6
-        | | | | | | | 
-        | | | | | | |   Other LABs fed by signals
-        | | | | | | |   that feed LAB 'D'
-LC      | | | | | | | | A B C D E F G H |     Logic cells that feed LAB 'D':
+           Logic cells placed in LAB 'A'
+        +- LC2 |score:check1|~924~1
+        | 
+        |   Other LABs fed by signals
+        |   that feed LAB 'A'
+LC      | | A B C D E F G H |     Logic cells that feed LAB 'A':
+LC2  -> * | * - * - - * - - | <-- |score:check1|~924~1
 
 Pin
+11   -> * | * - - * - * * - | <-- joy_left0
+10   -> * | * - - * - * * - | <-- joy_left1
+9    -> * | * - - * - * * - | <-- joy_left2
+6    -> * | * - - * - * * - | <-- joy_left3
+15   -> * | * - - * - * * - | <-- joy_left4
+16   -> * | * - - * - * * - | <-- joy_left5
+21   -> * | * - - * - * * - | <-- joy_left6
+4    -> * | * - - * - * * - | <-- joy_left7
+5    -> * | * - - * - * * - | <-- joy_left8
+17   -> * | * - - * - - - * | <-- joy_right0
+18   -> * | * - - * - - - * | <-- joy_right1
+48   -> * | * - - * - - - * | <-- joy_right2
+28   -> * | * - - * - - - * | <-- joy_right3
+77   -> * | * - - * - - - * | <-- joy_right4
+8    -> * | * - - * - - - * | <-- joy_right5
+22   -> * | * - - * - - - * | <-- joy_right6
+20   -> * | * - - * - - - * | <-- joy_right7
+31   -> * | * - - * - - - * | <-- joy_right8
+12   -> * | * - * * * * * * | <-- selector
+LC105-> * | * - - - - * - - | <-- |score:check1|~27~1
+LC97 -> * | * - - * - - - - | <-- |score:check1|~28~1
+LC50 -> * | * - - * - - * - | <-- |score:check1|~33~1
+LC58 -> * | * - - - - - - - | <-- |score:check1|~924~2
+LC55 -> * | * - - - - - - - | <-- |score:check1|~924~3
+LC116-> * | * - * * * * * * | <-- |state_counter:state_c|:108
+LC127-> * | * - * * * * * * | <-- |state_counter:state_c|:109
+LC113-> * | * - * * * * * * | <-- |state_counter:state_c|:110
+LC114-> * | * - * * * * * * | <-- |state_counter:state_c|:111
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:               e:\logicproject210\logicproject.rpt
+logicproject
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                 Logic cells placed in LAB 'C'
+        +----------------------- LC45 operator1
+        | +--------------------- LC46 |question_show:qs|~366~1
+        | | +------------------- LC33 |question_show:qs|~367~1~2
+        | | | +----------------- LC43 |question_show:qs|~367~1
+        | | | | +--------------- LC44 |question_show:qs|~368~1~2
+        | | | | | +------------- LC36 |question_show:qs|~368~1
+        | | | | | | +----------- LC47 |question_show:qs|~369~1~2
+        | | | | | | | +--------- LC34 |question_show:qs|~369~1
+        | | | | | | | | +------- LC42 |question_show:qs|~838~1~2
+        | | | | | | | | | +----- LC41 |question_show:qs|~838~1
+        | | | | | | | | | | +--- LC37 score_right0
+        | | | | | | | | | | | +- LC38 score_right3
+        | | | | | | | | | | | | 
+        | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | A B C D E F G H |     Logic cells that feed LAB 'C':
+LC33 -> - - - * - - - - - - - - | - - * - - - - - | <-- |question_show:qs|~367~1~2
+LC43 -> - - * * - - - - - - - - | - - * * - - - - | <-- |question_show:qs|~367~1
+LC44 -> - - - - - * - - - - - - | - - * - - - - - | <-- |question_show:qs|~368~1~2
+LC36 -> - - - - * * - - - - - - | - - * * - - - - | <-- |question_show:qs|~368~1
+LC47 -> - - - - - - - * - - - - | - - * - - - - - | <-- |question_show:qs|~369~1~2
+LC34 -> - - - - - - * * - - - - | - - * * - - - - | <-- |question_show:qs|~369~1
+LC42 -> - - - - - - - - - * - - | - - * - - - - - | <-- |question_show:qs|~838~1~2
+LC41 -> * - - - - - - - * * - - | - - * - - - * - | <-- |question_show:qs|~838~1
+LC37 -> - - - - - - - - - - * * | - - * - - * - - | <-- score_right0
+LC38 -> - - - - - - - - - - * - | - - * - - * - - | <-- score_right3
+
+Pin
+12   -> * - - - - - - - * * - - | * - * * * * * * | <-- selector
+LC99 -> - * - - - - - - - - - - | - - * - - - - - | <-- |question_show:qs|~366~1~2
+LC107-> - - - - - - - - * * - - | - - * - - - - - | <-- |question_show:qs|~696~1
+LC112-> * - - - - - - - - - - - | - - * - - - - - | <-- |question_show:qs|~830~1
+LC2  -> - - - - - - - - - - * * | * - * - - * - - | <-- |score:check1|~924~1
+LC83 -> - - - - - - - - - - * * | - - * - - * - - | <-- score_right1
+LC88 -> - - - - - - - - - - * * | - - * - - * - - | <-- score_right2
+LC94 -> - - - - - - - - - - * * | - - * - - * - - | <-- score_right4
+LC116-> * * - * - * * * * * - - | * - * * * * * * | <-- |state_counter:state_c|:108
+LC127-> * * * * * * * * * * - - | * - * * * * * * | <-- |state_counter:state_c|:109
+LC113-> * * * * * * * * * * - - | * - * * * * * * | <-- |state_counter:state_c|:110
+LC114-> * * * * * * * * * * - - | * - * * * * * * | <-- |state_counter:state_c|:111
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:               e:\logicproject210\logicproject.rpt
+logicproject
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                                       Logic cells placed in LAB 'D'
+        +----------------------------- LC50 |score:check1|~33~1
+        | +--------------------------- LC49 |score:check1|~591~2
+        | | +------------------------- LC58 |score:check1|~924~2
+        | | | +----------------------- LC55 |score:check1|~924~3
+        | | | | +--------------------- LC63 |score:check1|~1042~2
+        | | | | | +------------------- LC54 |score:check1|~1045~1
+        | | | | | | +----------------- LC62 |score:check1|~1045~2
+        | | | | | | | +--------------- LC60 |score:check1|~1049~1
+        | | | | | | | | +------------- LC64 seg_left0
+        | | | | | | | | | +----------- LC61 seg_left1
+        | | | | | | | | | | +--------- LC59 seg_left2
+        | | | | | | | | | | | +------- LC57 seg_left3
+        | | | | | | | | | | | | +----- LC56 seg_left4
+        | | | | | | | | | | | | | +--- LC53 seg_left5
+        | | | | | | | | | | | | | | +- LC51 seg_left6
+        | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | | | | | | | A B C D E F G H |     Logic cells that feed LAB 'D':
+LC50 -> - - * * - - - - - - - - - - - | * - - * - - * - | <-- |score:check1|~33~1
+LC62 -> - - - - - * - - - - - - - - - | - - - * - - - - | <-- |score:check1|~1045~2
+
+Pin
+11   -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left0
+10   -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left1
+9    -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left2
+6    -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left3
+15   -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left4
+16   -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left5
+21   -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left6
+4    -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left7
+5    -> - * - - * - - - - - - - - - - | * - - * - * * - | <-- joy_left8
+17   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right0
+18   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right1
+48   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right2
+28   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right3
+77   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right4
+8    -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right5
+22   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right6
+20   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right7
+31   -> * - * * - * * * - - - - - - - | * - - * - - - * | <-- joy_right8
+12   -> - * * * * * - - - - - - - - - | * - * * * * * * | <-- selector
+LC46 -> - - - - - - - - * * * * * * * | - - - * - - * - | <-- |question_show:qs|~366~1
+LC43 -> - - - - - - - - * * * * * * * | - - * * - - - - | <-- |question_show:qs|~367~1
+LC36 -> - - - - - - - - * * * * * * * | - - * * - - - - | <-- |question_show:qs|~368~1
+LC34 -> - - - - - - - - * * * * * * * | - - * * - - - - | <-- |question_show:qs|~369~1
+LC97 -> - - * * - - - - - - - - - - - | * - - * - - - - | <-- |score:check1|~28~1
+LC100-> - - - - - - - * - - - - - - - | - - - * - - - - | <-- |score:check1|~1042~1
+LC116-> - * * * * * * - - - - - - - * | * - * * * * * * | <-- |state_counter:state_c|:108
+LC127-> - * * * * * * - - - - - - - * | * - * * * * * * | <-- |state_counter:state_c|:109
+LC113-> - * * * * * * - - - - - - - * | * - * * * * * * | <-- |state_counter:state_c|:110
+LC114-> - * * * * * * - - - - - - - * | * - * * * * * * | <-- |state_counter:state_c|:111
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:               e:\logicproject210\logicproject.rpt
+logicproject
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'E':
+
+                               Logic cells placed in LAB 'E'
+        +--------------------- LC69 operator0
+        | +------------------- LC67 operator2
+        | | +----------------- LC65 operator3
+        | | | +--------------- LC72 |question_show:qs|~695~1
+        | | | | +------------- LC79 |question_show:qs|~829~1
+        | | | | | +----------- LC68 |question_show:qs|~837~1~2
+        | | | | | | +--------- LC66 |question_show:qs|~837~1
+        | | | | | | | +------- LC74 |question_show:qs|~839~1~2
+        | | | | | | | | +----- LC70 |question_show:qs|~839~1~3
+        | | | | | | | | | +--- LC73 |question_show:qs|~839~1
+        | | | | | | | | | | +- LC77 score_left3
+        | | | | | | | | | | | 
+        | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | |   that feed LAB 'E'
+LC      | | | | | | | | | | | | A B C D E F G H |     Logic cells that feed LAB 'E':
+LC72 -> - * - - - * * - - - - | - - - - * - - - | <-- |question_show:qs|~695~1
+LC79 -> - * - - - - - - - - - | - - - - * - - - | <-- |question_show:qs|~829~1
+LC68 -> - - - - - - * - - - - | - - - - * - - - | <-- |question_show:qs|~837~1~2
+LC66 -> - - - * * * * - - - - | - - - - * - - - | <-- |question_show:qs|~837~1
+LC74 -> - - - - - - - - * - - | - - - - * - - - | <-- |question_show:qs|~839~1~2
+LC70 -> - - - - - - - - - * - | - - - - * - - - | <-- |question_show:qs|~839~1~3
+LC73 -> * - - - - - - * - * - | - - - - * * - - | <-- |question_show:qs|~839~1
+
+Pin
+12   -> * * * - * * * * * * - | * - * * * * * * | <-- selector
+LC126-> - - - - - * - * * - - | - - - - * - - - | <-- |question_show:qs|~21~1
+LC89 -> - - * - - - - - - - - | - - - - * * - - | <-- |question_show:qs|~694~1
+LC95 -> - - - - - - - * * - - | - - - - * - - - | <-- |question_show:qs|~697~1
+LC96 -> - - * - - - - - - - - | - - - - * - - - | <-- |question_show:qs|~828~1
+LC82 -> * - - - - - - - - - - | - - - - * - - - | <-- |question_show:qs|~831~1
+LC81 -> - - - - - - - - - - * | - - - - * * - - | <-- |score:check1|~794~1
+LC91 -> - - - - - - - - - - * | - - - - * * - - | <-- score_left0
+LC85 -> - - - - - - - - - - * | - - - - * * - - | <-- score_left1
+LC86 -> - - - - - - - - - - * | - - - - * * - - | <-- score_left2
+LC93 -> - - - - - - - - - - * | - - - - * * - - | <-- score_left4
+LC116-> * * * * * * * * - * - | * - * * * * * * | <-- |state_counter:state_c|:108
+LC127-> * * * * * * * * - * - | * - * * * * * * | <-- |state_counter:state_c|:109
+LC113-> * * * * * * * * - * - | * - * * * * * * | <-- |state_counter:state_c|:110
+LC114-> * * * * * * * * - * - | * - * * * * * * | <-- |state_counter:state_c|:111
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:               e:\logicproject210\logicproject.rpt
+logicproject
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'F':
+
+                                       Logic cells placed in LAB 'F'
+        +----------------------------- LC89 |question_show:qs|~694~1
+        | +--------------------------- LC95 |question_show:qs|~697~1
+        | | +------------------------- LC96 |question_show:qs|~828~1
+        | | | +----------------------- LC82 |question_show:qs|~831~1
+        | | | | +--------------------- LC92 |question_show:qs|~836~1~2
+        | | | | | +------------------- LC90 |question_show:qs|~836~1
+        | | | | | | +----------------- LC84 |score:check1|~781~1
+        | | | | | | | +--------------- LC81 |score:check1|~794~1
+        | | | | | | | | +------------- LC91 score_left0
+        | | | | | | | | | +----------- LC85 score_left1
+        | | | | | | | | | | +--------- LC86 score_left2
+        | | | | | | | | | | | +------- LC93 score_left4
+        | | | | | | | | | | | | +----- LC83 score_right1
+        | | | | | | | | | | | | | +--- LC88 score_right2
+        | | | | | | | | | | | | | | +- LC94 score_right4
+        | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | |   that feed LAB 'F'
+LC      | | | | | | | | | | | | | | | | A B C D E F G H |     Logic cells that feed LAB 'F':
+LC89 -> - - - - * * - - - - - - - - - | - - - - * * - - | <-- |question_show:qs|~694~1
+LC92 -> - - - - - * - - - - - - - - - | - - - - - * - - | <-- |question_show:qs|~836~1~2
+LC90 -> * - * - * * - - - - - - - - - | - - - - - * - - | <-- |question_show:qs|~836~1
+LC81 -> - - - - - - - * * * * * - - - | - - - - * * - - | <-- |score:check1|~794~1
+LC91 -> - - - - - - - - * * * * - - - | - - - - * * - - | <-- score_left0
+LC85 -> - - - - - - - - * * * * - - - | - - - - * * - - | <-- score_left1
+LC86 -> - - - - - - - - * * * * - - - | - - - - * * - - | <-- score_left2
+LC93 -> - - - - - - - - * * * * - - - | - - - - * * - - | <-- score_left4
+LC83 -> - - - - - - - - - - - - * * * | - - * - - * - - | <-- score_right1
+LC88 -> - - - - - - - - - - - - * * * | - - * - - * - - | <-- score_right2
+LC94 -> - - - - - - - - - - - - * * * | - - * - - * - - | <-- score_right4
+
+Pin
+11   -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left0
+10   -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left1
+9    -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left2
+6    -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left3
+15   -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left4
+16   -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left5
+21   -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left6
+4    -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left7
+5    -> - - - - - - * * - - - - - - - | * - - * - * * - | <-- joy_left8
+12   -> - - * * * * * - - - - - - - - | * - * * * * * * | <-- selector
+LC73 -> - * - * - - - - - - - - - - - | - - - - * * - - | <-- |question_show:qs|~839~1
+LC105-> - - - - - - - * - - - - - - - | * - - - - * - - | <-- |score:check1|~27~1
+LC122-> - - - - - - - * - - - - - - - | - - - - - * - - | <-- |score:check1|~790~1
+LC2  -> - - - - - - - - - - - - * * * | * - * - - * - - | <-- |score:check1|~924~1
+LC77 -> - - - - - - - - * * * * - - - | - - - - - * - - | <-- score_left3
+LC37 -> - - - - - - - - - - - - * * * | - - * - - * - - | <-- score_right0
+LC38 -> - - - - - - - - - - - - * * * | - - * - - * - - | <-- score_right3
+LC116-> * * * * * * * - - - - - - - - | * - * * * * * * | <-- |state_counter:state_c|:108
+LC127-> * * * * * * * - - - - - - - - | * - * * * * * * | <-- |state_counter:state_c|:109
+LC113-> * * * * * * * - - - - - - - - | * - * * * * * * | <-- |state_counter:state_c|:110
+LC114-> * * * * * * * - - - - - - - - | * - * * * * * * | <-- |state_counter:state_c|:111
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:               e:\logicproject210\logicproject.rpt
+logicproject
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'G':
+
+                                 Logic cells placed in LAB 'G'
+        +----------------------- LC99 |question_show:qs|~366~1~2
+        | +--------------------- LC103 |question_show:qs|~596~1
+        | | +------------------- LC107 |question_show:qs|~696~1
+        | | | +----------------- LC112 |question_show:qs|~830~1
+        | | | | +--------------- LC105 |score:check1|~27~1
+        | | | | | +------------- LC97 |score:check1|~28~1
+        | | | | | | +----------- LC108 |score:check1|~425~1
+        | | | | | | | +--------- LC98 |score:check1|~591~1
+        | | | | | | | | +------- LC100 |score:check1|~1042~1
+        | | | | | | | | | +----- LC101 |score:check1|~1054~1
+        | | | | | | | | | | +--- LC104 seg_right5
+        | | | | | | | | | | | +- LC109 seg_right6
+        | | | | | | | | | | | | 
+        | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | |   that feed LAB 'G'
+LC      | | | | | | | | | | | | | A B C D E F G H |     Logic cells that feed LAB 'G':
+LC103-> - * - - - - - - - - * * | - - - - - - * * | <-- |question_show:qs|~596~1
+LC108-> - - - - - - - - * - - - | - - - - - - * - | <-- |score:check1|~425~1
+LC101-> - - - - - - - - * * - - | - - - - - - * * | <-- |score:check1|~1054~1
+
+Pin
+11   -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left0
+10   -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left1
+9    -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left2
+6    -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left3
+15   -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left4
+16   -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left5
+21   -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left6
+4    -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left7
+5    -> - - - - * * * * * * - - | * - - * - * * - | <-- joy_left8
+12   -> - - - * - - - * * - - - | * - * * * * * * | <-- selector
+LC46 -> * - - - - - - - - - - - | - - - * - - * - | <-- |question_show:qs|~366~1
+LC123-> - - - - - - - - - - * * | - - - - - - * * | <-- |question_show:qs|~593~1
+LC119-> - - - - - - - - - - * * | - - - - - - * * | <-- |question_show:qs|~594~1
+LC121-> - - - - - - - - - - * * | - - - - - - * * | <-- |question_show:qs|~595~1
+LC41 -> - - * * - - - - - - - - | - - * - - - * - | <-- |question_show:qs|~838~1
+LC50 -> - - - - - - - - - * - - | * - - * - - * - | <-- |score:check1|~33~1
+LC49 -> - - - - - - - * - - - - | - - - - - - * - | <-- |score:check1|~591~2
+LC124-> - - - - - - - - - * - - | - - - - - - * - | <-- |score:check1|~952~1
+LC63 -> - - - - - - - - * - - - | - - - - - - * - | <-- |score:check1|~1042~2
+LC54 -> - - - - - - - - - * - - | - - - - - - * - | <-- |score:check1|~1045~1
+LC60 -> - - - - - - - - - * - - | - - - - - - * - | <-- |score:check1|~1049~1
+LC116-> * * * * - - * * * - - - | * - * * * * * * | <-- |state_counter:state_c|:108
+LC127-> * * * * - - * * * - - - | * - * * * * * * | <-- |state_counter:state_c|:109
+LC113-> * * * * - - * * * - - - | * - * * * * * * | <-- |state_counter:state_c|:110
+LC114-> * * * * - - * * * - - - | * - * * * * * * | <-- |state_counter:state_c|:111
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:               e:\logicproject210\logicproject.rpt
+logicproject
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'H':
+
+                                         Logic cells placed in LAB 'H'
+        +------------------------------- LC126 |question_show:qs|~21~1
+        | +----------------------------- LC123 |question_show:qs|~593~1
+        | | +--------------------------- LC119 |question_show:qs|~594~1
+        | | | +------------------------- LC125 |question_show:qs|~595~1~2
+        | | | | +----------------------- LC121 |question_show:qs|~595~1
+        | | | | | +--------------------- LC122 |score:check1|~790~1
+        | | | | | | +------------------- LC124 |score:check1|~952~1
+        | | | | | | | +----------------- LC128 seg_right0
+        | | | | | | | | +--------------- LC120 seg_right1
+        | | | | | | | | | +------------- LC117 seg_right2
+        | | | | | | | | | | +----------- LC118 seg_right3
+        | | | | | | | | | | | +--------- LC115 seg_right4
+        | | | | | | | | | | | | +------- LC116 |state_counter:state_c|:108
+        | | | | | | | | | | | | | +----- LC127 |state_counter:state_c|:109
+        | | | | | | | | | | | | | | +--- LC113 |state_counter:state_c|:110
+        | | | | | | | | | | | | | | | +- LC114 |state_counter:state_c|:111
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'H'
+LC      | | | | | | | | | | | | | | | | | A B C D E F G H |     Logic cells that feed LAB 'H':
+LC123-> - * - - - - - * * * * * - - - - | - - - - - - * * | <-- |question_show:qs|~593~1
+LC119-> - - * - - - - * * * * * - - - - | - - - - - - * * | <-- |question_show:qs|~594~1
+LC125-> - - - - * - - - - - - - - - - - | - - - - - - - * | <-- |question_show:qs|~595~1~2
+LC121-> - - - * * - - * * * * * - - - - | - - - - - - * * | <-- |question_show:qs|~595~1
+LC116-> * * * - * - * - - - - - * * * * | * - * * * * * * | <-- |state_counter:state_c|:108
+LC127-> * * * * * - * - - - - - * * - * | * - * * * * * * | <-- |state_counter:state_c|:109
+LC113-> * * * * * - * - - - - - * * * * | * - * * * * * * | <-- |state_counter:state_c|:110
+LC114-> * * * * * - * - - - - - * * * * | * - * * * * * * | <-- |state_counter:state_c|:111
+
+Pin
+17   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right0
+18   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right1
+48   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right2
+28   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right3
+77   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right4
+8    -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right5
+22   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right6
+20   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right7
+31   -> - - - - - * * - - - - - - - - - | * - - * - - - * | <-- joy_right8
+12   -> - - - - - - * - - - - - - - - - | * - * * * * * * | <-- selector
+LC103-> - - - - - - - * * * * * - - - - | - - - - - - * * | <-- |question_show:qs|~596~1
+LC98 -> - - - - - * - - - - - - - - - - | - - - - - - - * | <-- |score:check1|~591~1
+LC84 -> - - - - - * - - - - - - - - - - | - - - - - - - * | <-- |score:check1|~781~1
+LC101-> - - - - - - - - - - - - * * * * | - - - - - - * * | <-- |score:check1|~1054~1
 
 
 * = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
@@ -287,39 +774,898 @@ logicproject
 
 ** EQUATIONS **
 
+joy_left0 : INPUT;
+joy_left1 : INPUT;
+joy_left2 : INPUT;
+joy_left3 : INPUT;
+joy_left4 : INPUT;
+joy_left5 : INPUT;
+joy_left6 : INPUT;
+joy_left7 : INPUT;
+joy_left8 : INPUT;
+joy_right0 : INPUT;
+joy_right1 : INPUT;
+joy_right2 : INPUT;
+joy_right3 : INPUT;
+joy_right4 : INPUT;
+joy_right5 : INPUT;
+joy_right6 : INPUT;
+joy_right7 : INPUT;
+joy_right8 : INPUT;
+selector : INPUT;
 
--- Node name is 'sevensegment0' 
--- Equation name is 'sevensegment0', location is LC064, type is output.
- sevensegment0 = LCELL( VCC $  VCC);
+-- Node name is 'operator0' 
+-- Equation name is 'operator0', location is LC069, type is output.
+ operator0 = LCELL( _EQ001 $  GND);
+  _EQ001 =  _LC113 &  _LC114 & !_LC116 & !_LC127 & !selector &  _X001
+         #  _LC073 & !_LC113 & !_LC114 & !_LC116 & !selector &  _X001
+         #  _LC073 &  _LC116 & !selector &  _X001 &  _X002
+         # !_LC114 & !_LC116 &  _LC127 & !selector &  _X001
+         #  _LC082 &  selector;
+  _X001  = EXP(!_LC113 & !_LC114 & !_LC116 & !_LC127);
+  _X002  = EXP(!_LC113 & !_LC114 & !_LC127);
 
--- Node name is 'sevensegment1' 
--- Equation name is 'sevensegment1', location is LC061, type is output.
- sevensegment1 = LCELL( GND $  VCC);
+-- Node name is 'operator1' 
+-- Equation name is 'operator1', location is LC045, type is output.
+ operator1 = LCELL( _EQ002 $  GND);
+  _EQ002 = !_LC113 & !_LC114 &  _LC116 & !_LC127 & !selector &  _X001
+         #  _LC113 & !_LC114 & !_LC116 & !_LC127 & !selector &  _X001
+         #  _LC041 & !_LC114 & !_LC127 & !selector &  _X001
+         #  _LC041 &  _LC116 & !selector &  _X001
+         #  _LC112 &  selector;
+  _X001  = EXP(!_LC113 & !_LC114 & !_LC116 & !_LC127);
 
--- Node name is 'sevensegment2' 
--- Equation name is 'sevensegment2', location is LC059, type is output.
- sevensegment2 = LCELL( GND $  VCC);
+-- Node name is 'operator2' 
+-- Equation name is 'operator2', location is LC067, type is output.
+ operator2 = LCELL( _EQ003 $  GND);
+  _EQ003 =  _LC072 & !selector &  _X001
+         #  _LC079 &  selector;
+  _X001  = EXP(!_LC113 & !_LC114 & !_LC116 & !_LC127);
 
--- Node name is 'sevensegment3' 
--- Equation name is 'sevensegment3', location is LC057, type is output.
- sevensegment3 = LCELL( VCC $  VCC);
+-- Node name is 'operator3' 
+-- Equation name is 'operator3', location is LC065, type is output.
+ operator3 = LCELL( _EQ004 $ !selector);
+  _EQ004 = !_LC089 & !selector &  _X001
+         #  _LC096 &  selector;
+  _X001  = EXP(!_LC113 & !_LC114 & !_LC116 & !_LC127);
 
--- Node name is 'sevensegment4' 
--- Equation name is 'sevensegment4', location is LC056, type is output.
- sevensegment4 = LCELL( VCC $  VCC);
+-- Node name is 'score_left0' = '|score_counter:scL|:231' 
+-- Equation name is 'score_left0', type is output 
+ score_left0 = DFFE( _EQ005 $ !score_left4,  _LC081,  VCC,  VCC,  VCC);
+  _EQ005 = !score_left1 &  score_left2 & !score_left4
+         # !score_left2 &  score_left3 & !score_left4
+         # !score_left0 &  score_left1 & !score_left4;
 
--- Node name is 'sevensegment5' 
--- Equation name is 'sevensegment5', location is LC053, type is output.
- sevensegment5 = LCELL( VCC $  GND);
+-- Node name is 'score_left1' = '|score_counter:scL|:230' 
+-- Equation name is 'score_left1', type is output 
+ score_left1 = DFFE( _EQ006 $  GND,  _LC081,  VCC,  VCC,  VCC);
+  _EQ006 =  score_left0 &  score_left1 &  score_left2 & !score_left4
+         #  score_left0 & !score_left2 & !score_left3 & !score_left4;
 
--- Node name is 'sevensegment6' 
--- Equation name is 'sevensegment6', location is LC051, type is output.
- sevensegment6 = LCELL( VCC $  GND);
+-- Node name is 'score_left2' = '|score_counter:scL|:229' 
+-- Equation name is 'score_left2', type is output 
+ score_left2 = DFFE( _EQ007 $  GND,  _LC081,  VCC,  VCC,  VCC);
+  _EQ007 =  score_left0 &  score_left1 &  score_left2 & !score_left4
+         #  score_left0 &  score_left1 & !score_left3 & !score_left4;
+
+-- Node name is 'score_left3' = '|score_counter:scL|:228' 
+-- Equation name is 'score_left3', type is output 
+ score_left3 = DFFE( _EQ008 $  GND,  _LC081,  VCC,  VCC,  VCC);
+  _EQ008 =  score_left0 &  score_left1 &  score_left2 & !score_left4;
+
+-- Node name is 'score_left4' = '|score_counter:scL|:227' 
+-- Equation name is 'score_left4', type is output 
+ score_left4 = DFFE( _EQ009 $  GND,  _LC081,  VCC,  VCC,  VCC);
+  _EQ009 =  score_left0 &  score_left1 &  score_left2 &  score_left3 & 
+             !score_left4;
+
+-- Node name is 'score_right0' = '|score_counter:scR|:231' 
+-- Equation name is 'score_right0', type is output 
+ score_right0 = DFFE( _EQ010 $ !score_right4,  _LC002,  VCC,  VCC,  VCC);
+  _EQ010 = !score_right1 &  score_right2 & !score_right4
+         # !score_right2 &  score_right3 & !score_right4
+         # !score_right0 &  score_right1 & !score_right4;
+
+-- Node name is 'score_right1' = '|score_counter:scR|:230' 
+-- Equation name is 'score_right1', type is output 
+ score_right1 = DFFE( _EQ011 $  GND,  _LC002,  VCC,  VCC,  VCC);
+  _EQ011 =  score_right0 &  score_right1 &  score_right2 & !score_right4
+         #  score_right0 & !score_right2 & !score_right3 & !score_right4;
+
+-- Node name is 'score_right2' = '|score_counter:scR|:229' 
+-- Equation name is 'score_right2', type is output 
+ score_right2 = DFFE( _EQ012 $  GND,  _LC002,  VCC,  VCC,  VCC);
+  _EQ012 =  score_right0 &  score_right1 &  score_right2 & !score_right4
+         #  score_right0 &  score_right1 & !score_right3 & !score_right4;
+
+-- Node name is 'score_right3' = '|score_counter:scR|:228' 
+-- Equation name is 'score_right3', type is output 
+ score_right3 = DFFE( _EQ013 $  GND,  _LC002,  VCC,  VCC,  VCC);
+  _EQ013 =  score_right0 &  score_right1 &  score_right2 & !score_right4;
+
+-- Node name is 'score_right4' = '|score_counter:scR|:227' 
+-- Equation name is 'score_right4', type is output 
+ score_right4 = DFFE( _EQ014 $  GND,  _LC002,  VCC,  VCC,  VCC);
+  _EQ014 =  score_right0 &  score_right1 &  score_right2 &  score_right3 & 
+             !score_right4;
+
+-- Node name is 'seg_left0' 
+-- Equation name is 'seg_left0', location is LC064, type is output.
+ seg_left0 = LCELL( _EQ015 $  VCC);
+  _EQ015 =  _LC034 & !_LC036 & !_LC043 & !_LC046
+         # !_LC034 & !_LC036 &  _LC043 & !_LC046;
+
+-- Node name is 'seg_left1' 
+-- Equation name is 'seg_left1', location is LC061, type is output.
+ seg_left1 = LCELL( _EQ016 $ !_LC046);
+  _EQ016 = !_LC034 &  _LC036 &  _LC043 & !_LC046
+         #  _LC034 & !_LC036 &  _LC043 & !_LC046
+         # !_LC036 & !_LC043 &  _LC046;
+
+-- Node name is 'seg_left2' 
+-- Equation name is 'seg_left2', location is LC059, type is output.
+ seg_left2 = LCELL( _EQ017 $ !_LC046);
+  _EQ017 = !_LC034 &  _LC036 & !_LC043 & !_LC046
+         # !_LC036 & !_LC043 &  _LC046;
+
+-- Node name is 'seg_left3' 
+-- Equation name is 'seg_left3', location is LC057, type is output.
+ seg_left3 = LCELL( _EQ018 $  VCC);
+  _EQ018 =  _LC034 &  _LC036 &  _LC043 & !_LC046
+         #  _LC034 & !_LC036 & !_LC043 & !_LC046
+         # !_LC034 & !_LC036 &  _LC043 & !_LC046;
+
+-- Node name is 'seg_left4' 
+-- Equation name is 'seg_left4', location is LC056, type is output.
+ seg_left4 = LCELL( _EQ019 $  VCC);
+  _EQ019 =  _LC034 & !_LC036 & !_LC043
+         # !_LC036 &  _LC043 & !_LC046
+         #  _LC034 & !_LC046;
+
+-- Node name is 'seg_left5' 
+-- Equation name is 'seg_left5', location is LC053, type is output.
+ seg_left5 = LCELL( _EQ020 $  VCC);
+  _EQ020 =  _LC034 &  _LC036 & !_LC046
+         #  _LC034 & !_LC043 & !_LC046
+         #  _LC036 & !_LC043 & !_LC046;
+
+-- Node name is 'seg_left6' = '|sevenseg:segL|~151~1' 
+-- Equation name is 'seg_left6', type is output 
+ seg_left6 = LCELL( _EQ021 $  VCC);
+  _EQ021 =  _LC034 & !_LC036 &  _LC043 &  _LC046 & !_LC113 &  _LC114 & 
+             !_LC116 &  _LC127
+         #  _LC034 & !_LC036 &  _LC043 &  _LC046 & !_LC114 & !_LC116 & 
+             !_LC127
+         #  _LC034 &  _LC036 &  _LC043 & !_LC046
+         # !_LC034 & !_LC043 & !_LC046
+         # !_LC036 & !_LC043 & !_LC046;
+
+-- Node name is 'seg_right0' 
+-- Equation name is 'seg_right0', location is LC128, type is output.
+ seg_right0 = LCELL( _EQ022 $  VCC);
+  _EQ022 =  _LC103 & !_LC119 & !_LC121 & !_LC123
+         # !_LC103 &  _LC119 & !_LC121 & !_LC123;
+
+-- Node name is 'seg_right1' 
+-- Equation name is 'seg_right1', location is LC120, type is output.
+ seg_right1 = LCELL( _EQ023 $ !_LC123);
+  _EQ023 = !_LC103 &  _LC119 &  _LC121 & !_LC123
+         #  _LC103 &  _LC119 & !_LC121 & !_LC123
+         # !_LC119 & !_LC121 &  _LC123;
+
+-- Node name is 'seg_right2' 
+-- Equation name is 'seg_right2', location is LC117, type is output.
+ seg_right2 = LCELL( _EQ024 $ !_LC123);
+  _EQ024 = !_LC103 & !_LC119 &  _LC121 & !_LC123
+         # !_LC119 & !_LC121 &  _LC123;
+
+-- Node name is 'seg_right3' 
+-- Equation name is 'seg_right3', location is LC118, type is output.
+ seg_right3 = LCELL( _EQ025 $  VCC);
+  _EQ025 =  _LC103 &  _LC119 &  _LC121 & !_LC123
+         #  _LC103 & !_LC119 & !_LC121 & !_LC123
+         # !_LC103 &  _LC119 & !_LC121 & !_LC123;
+
+-- Node name is 'seg_right4' 
+-- Equation name is 'seg_right4', location is LC115, type is output.
+ seg_right4 = LCELL( _EQ026 $  VCC);
+  _EQ026 =  _LC103 & !_LC119 & !_LC121
+         #  _LC119 & !_LC121 & !_LC123
+         #  _LC103 & !_LC123;
+
+-- Node name is 'seg_right5' 
+-- Equation name is 'seg_right5', location is LC104, type is output.
+ seg_right5 = LCELL( _EQ027 $  VCC);
+  _EQ027 =  _LC103 &  _LC121 & !_LC123
+         #  _LC103 & !_LC119 & !_LC123
+         # !_LC119 &  _LC121 & !_LC123;
+
+-- Node name is 'seg_right6' 
+-- Equation name is 'seg_right6', location is LC109, type is output.
+ seg_right6 = LCELL( _EQ028 $  VCC);
+  _EQ028 =  _LC103 &  _LC119 &  _LC121 & !_LC123
+         # !_LC103 & !_LC119 & !_LC123
+         # !_LC119 & !_LC121 & !_LC123;
+
+-- Node name is '|question_show:qs|~21~1' 
+-- Equation name is '_LC126', type is buried 
+-- synthesized logic cell 
+_LC126   = LCELL( _EQ029 $  GND);
+  _EQ029 = !_LC113 & !_LC114 & !_LC116 & !_LC127;
+
+-- Node name is '|question_show:qs|~366~1~2' 
+-- Equation name is '_LC099', type is buried 
+-- synthesized logic cell 
+_LC099   = LCELL( _EQ030 $  GND);
+  _EQ030 = !_LC046 & !_LC113 &  _LC114 &  _LC127
+         # !_LC113 & !_LC114 & !_LC127
+         # !_LC046 & !_LC114 & !_LC127
+         # !_LC046 &  _LC116;
+
+-- Node name is '|question_show:qs|~366~1' 
+-- Equation name is '_LC046', type is buried 
+-- synthesized logic cell 
+_LC046   = LCELL( _EQ031 $  _LC116);
+  _EQ031 = !_LC113 &  _LC114 & !_LC116 &  _LC127
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127
+         # !_LC114 & !_LC116 & !_LC127
+         #  _LC099;
+
+-- Node name is '|question_show:qs|~367~1~2' 
+-- Equation name is '_LC033', type is buried 
+-- synthesized logic cell 
+_LC033   = LCELL( _EQ032 $  GND);
+  _EQ032 =  _LC043 &  _LC113 &  _LC114 & !_LC127
+         #  _LC043 & !_LC114 &  _LC127;
+
+-- Node name is '|question_show:qs|~367~1' 
+-- Equation name is '_LC043', type is buried 
+-- synthesized logic cell 
+_LC043   = LCELL( _EQ033 $  GND);
+  _EQ033 =  _LC113 &  _LC114 & !_LC116 & !_LC127
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127
+         # !_LC114 & !_LC116 &  _LC127
+         #  _LC043 &  _LC116
+         #  _LC033;
+
+-- Node name is '|question_show:qs|~368~1~2' 
+-- Equation name is '_LC044', type is buried 
+-- synthesized logic cell 
+_LC044   = LCELL( _EQ034 $  GND);
+  _EQ034 =  _LC036 &  _LC113 & !_LC114 &  _LC127
+         #  _LC036 & !_LC113 &  _LC114 & !_LC127;
+
+-- Node name is '|question_show:qs|~368~1' 
+-- Equation name is '_LC036', type is buried 
+-- synthesized logic cell 
+_LC036   = LCELL( _EQ035 $  GND);
+  _EQ035 =  _LC113 & !_LC114 & !_LC116 &  _LC127
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127
+         # !_LC113 &  _LC114 & !_LC116 & !_LC127
+         #  _LC036 &  _LC116
+         #  _LC044;
+
+-- Node name is '|question_show:qs|~369~1~2' 
+-- Equation name is '_LC047', type is buried 
+-- synthesized logic cell 
+_LC047   = LCELL( _EQ036 $  GND);
+  _EQ036 = !_LC113 & !_LC114 & !_LC116
+         # !_LC034 & !_LC114 &  _LC127
+         # !_LC034 & !_LC113 & !_LC127;
+
+-- Node name is '|question_show:qs|~369~1' 
+-- Equation name is '_LC034', type is buried 
+-- synthesized logic cell 
+_LC034   = LCELL( _EQ037 $  VCC);
+  _EQ037 = !_LC114 & !_LC116 &  _LC127
+         # !_LC113 & !_LC116 & !_LC127
+         # !_LC113 & !_LC114 & !_LC127
+         # !_LC034 &  _LC116
+         #  _LC047;
+
+-- Node name is '|question_show:qs|~593~1' 
+-- Equation name is '_LC123', type is buried 
+-- synthesized logic cell 
+_LC123   = LCELL( _EQ038 $  _LC116);
+  _EQ038 = !_LC113 & !_LC114 &  _LC116 & !_LC127
+         #  _LC116 & !_LC123;
+
+-- Node name is '|question_show:qs|~594~1' 
+-- Equation name is '_LC119', type is buried 
+-- synthesized logic cell 
+_LC119   = LCELL( _EQ039 $  GND);
+  _EQ039 = !_LC113 & !_LC114 &  _LC116 & !_LC127
+         # !_LC113 & !_LC114 & !_LC116 &  _LC127
+         #  _LC116 &  _LC119
+         # !_LC113 & !_LC114 &  _LC119 &  _LC127;
+
+-- Node name is '|question_show:qs|~595~1~2' 
+-- Equation name is '_LC125', type is buried 
+-- synthesized logic cell 
+_LC125   = LCELL( _EQ040 $  GND);
+  _EQ040 =  _LC113 &  _LC114 & !_LC121 &  _LC127
+         # !_LC113 & !_LC114 & !_LC121 &  _LC127;
+
+-- Node name is '|question_show:qs|~595~1' 
+-- Equation name is '_LC121', type is buried 
+-- synthesized logic cell 
+_LC121   = LCELL( _EQ041 $  VCC);
+  _EQ041 =  _LC113 &  _LC114 & !_LC116 &  _LC127
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127
+         # !_LC113 & !_LC114 & !_LC116 &  _LC127
+         #  _LC116 & !_LC121
+         #  _LC125;
+
+-- Node name is '|question_show:qs|~596~1' 
+-- Equation name is '_LC103', type is buried 
+-- synthesized logic cell 
+_LC103   = LCELL( _EQ042 $  VCC);
+  _EQ042 = !_LC114 & !_LC116 & !_LC127
+         # !_LC113 & !_LC114 & !_LC127
+         # !_LC103 &  _LC116
+         # !_LC103 & !_LC114 & !_LC127;
+
+-- Node name is '|question_show:qs|~694~1' 
+-- Equation name is '_LC089', type is buried 
+-- synthesized logic cell 
+_LC089   = LCELL( _EQ043 $  _LC116);
+  _EQ043 =  _LC090 & !_LC113 & !_LC114 & !_LC116 & !_LC127
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127
+         #  _LC114 & !_LC116 &  _LC127
+         # !_LC090 &  _LC116;
+
+-- Node name is '|question_show:qs|~695~1' 
+-- Equation name is '_LC072', type is buried 
+-- synthesized logic cell 
+_LC072   = LCELL( _EQ044 $  _LC066);
+  _EQ044 =  _LC066 & !_LC113 & !_LC114 &  _LC116 & !_LC127
+         # !_LC066 & !_LC113 &  _LC114 & !_LC116 & !_LC127
+         #  _LC066 &  _LC113 & !_LC116
+         #  _LC066 & !_LC116 &  _LC127;
+
+-- Node name is '|question_show:qs|~696~1' 
+-- Equation name is '_LC107', type is buried 
+-- synthesized logic cell 
+_LC107   = LCELL( _EQ045 $  GND);
+  _EQ045 = !_LC113 & !_LC114 &  _LC116 & !_LC127
+         #  _LC113 & !_LC114 & !_LC116 & !_LC127
+         #  _LC041 & !_LC114 & !_LC127
+         #  _LC041 &  _LC116;
+
+-- Node name is '|question_show:qs|~697~1' 
+-- Equation name is '_LC095', type is buried 
+-- synthesized logic cell 
+_LC095   = LCELL( _EQ046 $  GND);
+  _EQ046 =  _LC113 &  _LC114 & !_LC116 & !_LC127
+         #  _LC073 & !_LC113 & !_LC114 & !_LC116
+         #  _LC073 &  _LC116 &  _X002
+         # !_LC114 & !_LC116 &  _LC127;
+  _X002  = EXP(!_LC113 & !_LC114 & !_LC127);
+
+-- Node name is '|question_show:qs|~828~1' 
+-- Equation name is '_LC096', type is buried 
+-- synthesized logic cell 
+_LC096   = LCELL( _EQ047 $  _LC116);
+  _EQ047 =  _LC114 & !_LC116 &  _LC127 &  selector
+         # !_LC113 & !_LC114 & !_LC127 &  selector
+         #  _LC090 & !_LC116 & !selector
+         # !_LC090 &  _LC116;
+
+-- Node name is '|question_show:qs|~829~1' 
+-- Equation name is '_LC079', type is buried 
+-- synthesized logic cell 
+_LC079   = LCELL( _EQ048 $  _LC066);
+  _EQ048 = !_LC066 & !_LC113 &  _LC114 & !_LC116 & !_LC127 &  selector
+         #  _LC066 & !_LC113 & !_LC114 & !_LC127 &  selector
+         #  _LC066 &  _LC113 & !_LC116 &  selector
+         #  _LC066 & !_LC116 &  _LC127 &  selector;
+
+-- Node name is '|question_show:qs|~830~1' 
+-- Equation name is '_LC112', type is buried 
+-- synthesized logic cell 
+_LC112   = LCELL( _EQ049 $  GND);
+  _EQ049 =  _LC113 & !_LC114 & !_LC116 & !_LC127 &  selector
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127 &  selector
+         #  _LC041 &  _LC116
+         #  _LC041 & !selector;
+
+-- Node name is '|question_show:qs|~831~1' 
+-- Equation name is '_LC082', type is buried 
+-- synthesized logic cell 
+_LC082   = LCELL( _EQ050 $  GND);
+  _EQ050 =  _LC113 &  _LC114 & !_LC116 & !_LC127 &  selector
+         # !_LC114 & !_LC116 &  _LC127 &  selector
+         #  _LC073 &  _LC116 &  _X002
+         #  _LC073 & !selector;
+  _X002  = EXP(!_LC113 & !_LC114 & !_LC127);
+
+-- Node name is '|question_show:qs|~836~1~2' 
+-- Equation name is '_LC092', type is buried 
+-- synthesized logic cell 
+_LC092   = LCELL( _EQ051 $  GND);
+  _EQ051 =  _LC090 &  _LC114 &  _LC127 &  selector &  _X002
+         #  _LC090 & !_LC113 & !_LC114 & !_LC127 &  selector &  _X002
+         #  _LC089 &  _LC090 &  _LC116 &  _X002
+         #  _LC089 &  _LC114 & !_LC116 &  _LC127;
+  _X002  = EXP(!_LC113 & !_LC114 & !_LC127);
+
+-- Node name is '|question_show:qs|~836~1' 
+-- Equation name is '_LC090', type is buried 
+-- synthesized logic cell 
+_LC090   = LCELL( _EQ052 $  GND);
+  _EQ052 =  _LC090 &  _LC116 &  selector &  _X002
+         #  _LC114 & !_LC116 &  _LC127 &  selector
+         # !_LC113 & !_LC114 & !_LC116 & !_LC127
+         #  _LC089 & !selector
+         #  _LC092;
+  _X002  = EXP(!_LC113 & !_LC114 & !_LC127);
+
+-- Node name is '|question_show:qs|~837~1~2' 
+-- Equation name is '_LC068', type is buried 
+-- synthesized logic cell 
+_LC068   = LCELL( _EQ053 $  GND);
+  _EQ053 = !_LC113 & !_LC114 & !_LC127 &  _X003
+         # !_LC072 & !_LC114 & !_LC116 &  _X003
+         # !_LC116 &  _X003 &  _X004
+         # !_LC066 &  _X003 &  _X005
+         # !selector &  _X003;
+  _X003  = EXP( _LC072 & !_LC126);
+  _X004  = EXP(!_LC113 & !_LC127);
+  _X005  = EXP( _LC114 & !_LC116 &  selector);
+
+-- Node name is '|question_show:qs|~837~1' 
+-- Equation name is '_LC066', type is buried 
+-- synthesized logic cell 
+_LC066   = LCELL( _EQ054 $  VCC);
+  _EQ054 = !_LC113 & !_LC114 & !_LC127 &  selector
+         # !_LC072 & !_LC114 & !_LC116 &  selector
+         # !_LC116 &  selector &  _X004
+         # !_LC066 &  selector &  _X005
+         #  _LC068;
+  _X004  = EXP(!_LC113 & !_LC127);
+  _X005  = EXP( _LC114 & !_LC116 &  selector);
+
+-- Node name is '|question_show:qs|~838~1~2' 
+-- Equation name is '_LC042', type is buried 
+-- synthesized logic cell 
+_LC042   = LCELL( _EQ055 $  GND);
+  _EQ055 =  _LC041 &  _LC107 & !_LC114 &  _LC116 & !_LC127 &  selector & 
+              _X001
+         #  _LC107 &  _LC113 & !_LC114 & !_LC116 & !_LC127 &  _X001
+         #  _LC107 & !_LC113 & !_LC114 &  _LC116 & !_LC127 &  _X001
+         #  _LC041 &  _LC107 &  _X001 &  _X006
+         #  _LC107 & !selector &  _X001;
+  _X001  = EXP(!_LC113 & !_LC114 & !_LC116 & !_LC127);
+  _X006  = EXP(!_LC116 &  selector);
+
+-- Node name is '|question_show:qs|~838~1' 
+-- Equation name is '_LC041', type is buried 
+-- synthesized logic cell 
+_LC041   = LCELL( _EQ056 $  GND);
+  _EQ056 =  _LC041 &  _LC107 &  _LC113 & !_LC114 & !_LC127 &  _X001
+         #  _LC113 & !_LC114 & !_LC116 & !_LC127 &  selector
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127 &  selector
+         #  _LC041 &  selector &  _X006
+         #  _LC042;
+  _X001  = EXP(!_LC113 & !_LC114 & !_LC116 & !_LC127);
+  _X006  = EXP(!_LC116 &  selector);
+
+-- Node name is '|question_show:qs|~839~1~2' 
+-- Equation name is '_LC074', type is buried 
+-- synthesized logic cell 
+_LC074   = LCELL( _EQ057 $  GND);
+  _EQ057 = !_LC116 & !_LC127 &  selector &  _X007 &  _X008
+         #  _LC114 & !_LC116 &  _X008 &  _X009
+         # !_LC114 & !_LC127 &  _X007 &  _X009
+         # !_LC073 & !_LC113 & !_LC127 &  _X009
+         # !_LC073 &  _X006 &  _X009;
+  _X007  = EXP( _LC113 &  _LC116);
+  _X008  = EXP( _LC113 & !_LC127);
+  _X009  = EXP( _LC095 & !_LC126);
+  _X006  = EXP(!_LC116 &  selector);
+
+-- Node name is '|question_show:qs|~839~1~3' 
+-- Equation name is '_LC070', type is buried 
+-- synthesized logic cell 
+_LC070   = LCELL( _EQ058 $  GND);
+  _EQ058 = !selector &  _X009
+         #  _LC074;
+  _X009  = EXP( _LC095 & !_LC126);
+
+-- Node name is '|question_show:qs|~839~1' 
+-- Equation name is '_LC073', type is buried 
+-- synthesized logic cell 
+_LC073   = LCELL( _EQ059 $  VCC);
+  _EQ059 =  _LC114 & !_LC116 &  selector &  _X008
+         # !_LC114 & !_LC127 &  selector &  _X007
+         # !_LC073 & !_LC113 & !_LC127 &  selector
+         # !_LC073 &  selector &  _X006
+         #  _LC070;
+  _X008  = EXP( _LC113 & !_LC127);
+  _X007  = EXP( _LC113 &  _LC116);
+  _X006  = EXP(!_LC116 &  selector);
+
+-- Node name is '|score:check1|~27~1' 
+-- Equation name is '_LC105', type is buried 
+-- synthesized logic cell 
+_LC105   = LCELL( _EQ060 $  VCC);
+  _EQ060 = !joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8;
+
+-- Node name is '|score:check1|~28~1' 
+-- Equation name is '_LC097', type is buried 
+-- synthesized logic cell 
+_LC097   = LCELL( _EQ061 $  GND);
+  _EQ061 =  _X010;
+  _X010  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8);
+
+-- Node name is '|score:check1|~33~1' 
+-- Equation name is '_LC050', type is buried 
+-- synthesized logic cell 
+_LC050   = LCELL( _EQ062 $  VCC);
+  _EQ062 = !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8;
+
+-- Node name is '|score:check1|~425~1' 
+-- Equation name is '_LC108', type is buried 
+-- synthesized logic cell 
+_LC108   = LCELL( _EQ063 $  GND);
+  _EQ063 = !joy_left0 & !joy_left1 & !joy_left2 &  joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 & !_LC116 & !_LC127;
+
+-- Node name is '|score:check1|~591~1' 
+-- Equation name is '_LC098', type is buried 
+-- synthesized logic cell 
+_LC098   = LCELL( _EQ064 $  VCC);
+  _EQ064 = !_LC049 &  _X011 &  _X012 &  _X013;
+  _X011  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+              joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+              _LC114 & !_LC116 & !_LC127 & !selector);
+  _X012  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 &  joy_left8 & !_LC114 & 
+             !_LC116 &  _LC127 & !selector);
+  _X013  = EXP(!joy_left0 & !joy_left1 & !joy_left2 &  joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 & !_LC116 & !_LC127 & !selector);
+
+-- Node name is '|score:check1|~591~2' 
+-- Equation name is '_LC049', type is buried 
+-- synthesized logic cell 
+_LC049   = LCELL( _EQ065 $  GND);
+  _EQ065 =  joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 &  _LC113 & 
+              _LC114 & !_LC116 &  _LC127 & !selector
+         # !joy_left0 & !joy_left1 &  joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+              _LC114 & !_LC116 &  _LC127 & !selector
+         # !joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 &  joy_left7 & !joy_left8 &  _LC113 & 
+              _LC114 & !_LC116 & !_LC127 & !selector
+         # !joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 &  joy_left6 & !joy_left7 & !joy_left8 &  _LC113 & 
+             !_LC114 & !_LC116 & !_LC127 & !selector
+         # !joy_left0 &  joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 &  _LC116 & !_LC127 & !selector;
+
+-- Node name is '|score:check1|~781~1' 
+-- Equation name is '_LC084', type is buried 
+-- synthesized logic cell 
+_LC084   = LCELL( _EQ066 $  selector);
+  _EQ066 =  selector &  _X014 &  _X015 &  _X016 &  _X017 &  _X018 &  _X019 & 
+              _X020 &  _X021;
+  _X014  = EXP( joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 &  _LC113 & 
+              _LC114 & !_LC116 &  _LC127);
+  _X015  = EXP(!joy_left0 & !joy_left1 & !joy_left2 &  joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 & !_LC116 & !_LC127);
+  _X016  = EXP(!joy_left0 & !joy_left1 &  joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+              _LC114 & !_LC116 &  _LC127);
+  _X017  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 &  joy_left7 & !joy_left8 &  _LC113 & 
+              _LC114 & !_LC116 & !_LC127);
+  _X018  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 &  joy_left6 & !joy_left7 & !joy_left8 &  _LC113 & 
+             !_LC114 & !_LC116 & !_LC127);
+  _X019  = EXP(!joy_left0 &  joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 &  _LC116 & !_LC127);
+  _X020  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+              joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+              _LC114 & !_LC116 & !_LC127);
+  _X021  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 &  joy_left8 & !_LC114 & 
+             !_LC116 &  _LC127);
+
+-- Node name is '|score:check1|~790~1' 
+-- Equation name is '_LC122', type is buried 
+-- synthesized logic cell 
+_LC122   = LCELL( _EQ067 $  VCC);
+  _EQ067 = !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC084 & !_LC098
+         #  _X022;
+  _X022  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8);
+
+-- Node name is '|score:check1|~794~1' 
+-- Equation name is '_LC081', type is buried 
+-- synthesized logic cell 
+_LC081   = LCELL( _EQ068 $  VCC);
+  _EQ068 =  _X023 &  _X024;
+  _X023  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 &  _LC081);
+  _X024  = EXP( _LC105 &  _LC122);
+
+-- Node name is '|score:check1|~924~1' 
+-- Equation name is '_LC002', type is buried 
+-- synthesized logic cell 
+_LC002   = LCELL( _EQ069 $  VCC);
+  _EQ069 = !_LC055 & !_LC058 &  _X025 &  _X026 &  _X027 &  _X028 &  _X029 & 
+              _X030 &  _X031;
+  _X025  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 &  joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 &  _LC113 & !_LC114 & !_LC116 & 
+             !_LC127 & !selector);
+  _X026  = EXP(!joy_right0 &  joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 & !_LC113 & !_LC114 &  _LC116 & 
+             !_LC127 & !selector);
+  _X027  = EXP(!joy_right0 & !joy_right1 & !joy_right2 &  joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 & !_LC113 & !_LC114 & !_LC116 & 
+             !_LC127 & !selector);
+  _X028  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+              joy_right8 &  _LC050 &  _LC097 & !_LC114 & !_LC116 &  _LC127 & 
+              selector);
+  _X029  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+              joy_right8 &  _LC050 &  _LC097 & !_LC114 & !_LC116 &  _LC127 & 
+             !selector);
+  _X030  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 &  _LC002);
+  _X031  = EXP(!joy_right0 & !joy_right1 & !joy_right2 &  joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC105 & !_LC113 & !_LC114 & !_LC116 & 
+             !_LC127 &  selector);
+
+-- Node name is '|score:check1|~924~2' 
+-- Equation name is '_LC058', type is buried 
+-- synthesized logic cell 
+_LC058   = LCELL( _EQ070 $  GND);
+  _EQ070 =  joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 &  _LC113 &  _LC114 & !_LC116 & 
+              _LC127 &  selector
+         # !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 &  joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 &  _LC113 &  _LC114 & !_LC116 & 
+             !_LC127 &  selector
+         # !joy_right0 & !joy_right1 &  joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 & !_LC113 &  _LC114 & !_LC116 & 
+              _LC127 &  selector
+         #  joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 &  _LC113 &  _LC114 & !_LC116 & 
+              _LC127 & !selector
+         # !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 &  joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 &  _LC113 & !_LC114 & !_LC116 & 
+             !_LC127 &  selector;
+
+-- Node name is '|score:check1|~924~3' 
+-- Equation name is '_LC055', type is buried 
+-- synthesized logic cell 
+_LC055   = LCELL( _EQ071 $  GND);
+  _EQ071 = !joy_right0 &  joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 & !_LC113 & !_LC114 &  _LC116 & 
+             !_LC127 &  selector
+         # !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 &  joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 & !_LC113 &  _LC114 & !_LC116 & 
+             !_LC127 &  selector
+         # !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 &  joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 &  _LC113 &  _LC114 & !_LC116 & 
+             !_LC127 & !selector
+         # !joy_right0 & !joy_right1 &  joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 & !_LC113 &  _LC114 & !_LC116 & 
+              _LC127 & !selector
+         # !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 &  joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC050 &  _LC097 & !_LC113 &  _LC114 & !_LC116 & 
+             !_LC127 & !selector;
+
+-- Node name is '|score:check1|~952~1' 
+-- Equation name is '_LC124', type is buried 
+-- synthesized logic cell 
+_LC124   = LCELL( _EQ072 $  VCC);
+  _EQ072 =  _X032 &  _X033 &  _X034 &  _X035 &  _X036 &  _X037 &  _X038 & 
+              _X039;
+  _X032  = EXP(!joy_right0 & !joy_right1 &  joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 &  _LC114 & !_LC116 &  _LC127 & !selector);
+  _X033  = EXP( joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC113 &  _LC114 & !_LC116 &  _LC127 & !selector);
+  _X034  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 &  joy_right7 & 
+             !joy_right8 &  _LC113 &  _LC114 & !_LC116 & !_LC127 & !selector);
+  _X035  = EXP(!joy_right0 &  joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 & !_LC114 &  _LC116 & !_LC127 & !selector);
+  _X036  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 &  joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 &  _LC114 & !_LC116 & !_LC127 & !selector);
+  _X037  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 &  joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC113 & !_LC114 & !_LC116 & !_LC127 & !selector);
+  _X038  = EXP(!joy_right0 & !joy_right1 & !joy_right2 &  joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 & !_LC114 & !_LC116 & !_LC127 & !selector);
+  _X039  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+              joy_right8 & !_LC114 & !_LC116 &  _LC127 & !selector);
+
+-- Node name is '|score:check1|~1042~1' 
+-- Equation name is '_LC100', type is buried 
+-- synthesized logic cell 
+_LC100   = LCELL( _EQ073 $  VCC);
+  _EQ073 = !_LC063 &  selector &  _X040 &  _X041 &  _X042 &  _X043
+         # !selector &  _X015 &  _X044 &  _X045 &  _X046 &  _X047 &  _X048 & 
+              _X049 &  _X050;
+  _X040  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 &  joy_left6 & !joy_left7 & !joy_left8 &  _LC113 & 
+             !_LC114 & !_LC116 & !_LC127 &  selector);
+  _X041  = EXP(!joy_left0 & !joy_left1 & !joy_left2 &  joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 & !_LC116 & !_LC127 &  selector);
+  _X042  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 &  joy_left8 & !_LC114 & 
+             !_LC116 &  _LC127 &  selector);
+  _X043  = EXP( _LC101 & !selector);
+  _X015  = EXP(!joy_left0 & !joy_left1 & !joy_left2 &  joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 & !_LC116 & !_LC127);
+  _X044  = EXP( joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC108 & 
+              _LC113 &  _LC114 & !_LC116 &  _LC127);
+  _X045  = EXP(!joy_left0 & !joy_left1 &  joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC108 & 
+             !_LC113 &  _LC114 & !_LC116 &  _LC127);
+  _X046  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 &  joy_left7 & !joy_left8 & !_LC108 & 
+              _LC113 &  _LC114 & !_LC116 & !_LC127);
+  _X047  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 &  joy_left6 & !joy_left7 & !joy_left8 & !_LC108 & 
+              _LC113 & !_LC114 & !_LC116 & !_LC127);
+  _X048  = EXP(!joy_left0 &  joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC108 & 
+             !_LC113 & !_LC114 &  _LC116 & !_LC127);
+  _X049  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+              joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC108 & 
+             !_LC113 &  _LC114 & !_LC116 & !_LC127);
+  _X050  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 &  joy_left8 & !_LC108 & 
+             !_LC114 & !_LC116 &  _LC127);
+
+-- Node name is '|score:check1|~1042~2' 
+-- Equation name is '_LC063', type is buried 
+-- synthesized logic cell 
+_LC063   = LCELL( _EQ074 $  GND);
+  _EQ074 =  joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 &  _LC113 & 
+              _LC114 & !_LC116 &  _LC127 &  selector
+         # !joy_left0 & !joy_left1 &  joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+              _LC114 & !_LC116 &  _LC127 &  selector
+         # !joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 &  joy_left7 & !joy_left8 &  _LC113 & 
+              _LC114 & !_LC116 & !_LC127 &  selector
+         # !joy_left0 &  joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+             !_LC114 &  _LC116 & !_LC127 &  selector
+         # !joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+              joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 & !_LC113 & 
+              _LC114 & !_LC116 & !_LC127 &  selector;
+
+-- Node name is '|score:check1|~1045~1' 
+-- Equation name is '_LC054', type is buried 
+-- synthesized logic cell 
+_LC054   = LCELL( _EQ075 $  selector);
+  _EQ075 = !_LC062 &  selector &  _X051 &  _X052 &  _X053;
+  _X051  = EXP(!joy_right0 &  joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 & !_LC114 &  _LC116 & !_LC127);
+  _X052  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 &  joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 &  _LC114 & !_LC116 & !_LC127);
+  _X053  = EXP(!joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+              joy_right8 & !_LC114 & !_LC116 &  _LC127);
+
+-- Node name is '|score:check1|~1045~2' 
+-- Equation name is '_LC062', type is buried 
+-- synthesized logic cell 
+_LC062   = LCELL( _EQ076 $  GND);
+  _EQ076 = !joy_right0 & !joy_right1 & !joy_right2 &  joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 & !_LC114 & !_LC116 & !_LC127
+         #  joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC113 &  _LC114 & !_LC116 &  _LC127
+         # !joy_right0 & !joy_right1 &  joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 & !_LC113 &  _LC114 & !_LC116 &  _LC127
+         # !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 &  joy_right7 & 
+             !joy_right8 &  _LC113 &  _LC114 & !_LC116 & !_LC127
+         # !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 &  joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC113 & !_LC114 & !_LC116 & !_LC127;
+
+-- Node name is '|score:check1|~1049~1' 
+-- Equation name is '_LC060', type is buried 
+-- synthesized logic cell 
+_LC060   = LCELL( _EQ077 $  GND);
+  _EQ077 = !joy_right0 & !joy_right1 & !joy_right2 & !joy_right3 & 
+             !joy_right4 & !joy_right5 & !joy_right6 & !joy_right7 & 
+             !joy_right8 &  _LC100;
+
+-- Node name is '|score:check1|~1054~1' 
+-- Equation name is '_LC101', type is buried 
+-- synthesized logic cell 
+_LC101   = LCELL( _EQ078 $  GND);
+  _EQ078 = !joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8 &  _LC101
+         #  _LC050 &  _LC054 &  _X010
+         #  _LC050 &  _LC124 &  _X010
+         #  _LC060 &  _X010;
+  _X010  = EXP(!joy_left0 & !joy_left1 & !joy_left2 & !joy_left3 & !joy_left4 & 
+             !joy_left5 & !joy_left6 & !joy_left7 & !joy_left8);
+
+-- Node name is '|state_counter:state_c|:108' 
+-- Equation name is '_LC116', type is buried 
+_LC116   = DFFE( _EQ079 $  GND,  _LC101,  VCC,  VCC,  VCC);
+  _EQ079 =  _LC113 &  _LC114 & !_LC116 &  _LC127
+         # !_LC113 & !_LC114 &  _LC116 & !_LC127;
+
+-- Node name is '|state_counter:state_c|:109' 
+-- Equation name is '_LC127', type is buried 
+_LC127   = DFFE( _EQ080 $  GND,  _LC101,  VCC,  VCC,  VCC);
+  _EQ080 = !_LC113 &  _LC114 & !_LC116 &  _LC127
+         #  _LC113 &  _LC114 & !_LC116 & !_LC127
+         # !_LC114 & !_LC116 &  _LC127;
+
+-- Node name is '|state_counter:state_c|:110' 
+-- Equation name is '_LC113', type is buried 
+_LC113   = DFFE( _EQ081 $  GND,  _LC101,  VCC,  VCC,  VCC);
+  _EQ081 =  _LC113 & !_LC114 & !_LC116
+         # !_LC113 &  _LC114 & !_LC116;
+
+-- Node name is '|state_counter:state_c|:111' 
+-- Equation name is '_LC114', type is buried 
+_LC114   = DFFE( _EQ082 $  GND,  _LC101,  VCC,  VCC,  VCC);
+  _EQ082 = !_LC113 & !_LC114 & !_LC127
+         # !_LC114 & !_LC116;
 
 
 
 --     Shareable expanders that are duplicated in multiple LABs:
---     (none)
+--    _X001 occurs in LABs C, E
+--    _X002 occurs in LABs E, F
+--    _X006 occurs in LABs C, E
+--    _X015 occurs in LABs F, G
 
 
 
@@ -401,16 +1747,16 @@ Compilation Times
 
    Compiler Netlist Extractor             00:00:01
    Database Builder                       00:00:00
-   Logic Synthesizer                      00:00:00
+   Logic Synthesizer                      00:00:03
    Partitioner                            00:00:00
    Fitter                                 00:00:00
    Timing SNF Extractor                   00:00:00
    Assembler                              00:00:01
    --------------------------             --------
-   Total Time                             00:00:02
+   Total Time                             00:00:05
 
 
 Memory Allocated
 -----------------
 
-Peak memory allocated during compilation  = 14,997K
+Peak memory allocated during compilation  = 19,574K

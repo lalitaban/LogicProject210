@@ -21,13 +21,13 @@
 --
 CHIP logicproject
 BEGIN
-	|sevensegment6 :	OUTPUT_PIN = 40;
-	|sevensegment5 :	OUTPUT_PIN = 39;
-	|sevensegment4 :	OUTPUT_PIN = 37;
-	|sevensegment3 :	OUTPUT_PIN = 36;
-	|sevensegment2 :	OUTPUT_PIN = 35;
-	|sevensegment1 :	OUTPUT_PIN = 34;
-	|sevensegment0 :	OUTPUT_PIN = 33;
+	|seg_left6 :	OUTPUT_PIN = 40;
+	|seg_left5 :	OUTPUT_PIN = 39;
+	|seg_left4 :	OUTPUT_PIN = 37;
+	|seg_left3 :	OUTPUT_PIN = 36;
+	|seg_left2 :	OUTPUT_PIN = 35;
+	|seg_left1 :	OUTPUT_PIN = 34;
+	|seg_left0 :	OUTPUT_PIN = 33;
 	DEVICE = EPM7128SLC84-15;
 END;
 

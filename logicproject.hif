@@ -56,6 +56,12 @@ TREE
 {
 	logicproject::(0,0):(0): logicproject.v
 	{
-		sevenseg:1:(7,0):(12,s1): logicproject.v;
+		score:5:(20,0):(48,check1): logicproject.v;
+		state_counter:3:(12,0):(49,state_c): logicproject.v;
+		question_show:4:(15,0):(50,qs): logicproject.v;
+		sevenseg:1:(16,0):(51,segL): logicproject.v;
+		sevenseg:1:(17,0):(52,segR): logicproject.v;
+		score_counter:2:(22,0):(53,scL): logicproject.v;
+		score_counter:2:(23,0):(54,scR): logicproject.v;
 	}
 }

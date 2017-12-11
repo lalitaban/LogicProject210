@@ -1,10 +1,29 @@
-module logicproject(sevensegment);
-  output [6:0]sevensegment;
-  reg [3:0]num;
-  always @ ( 1 ) begin
-    num=4;
-  end
-  sevenseg s1(sevensegment,num);
+module logicproject(seg_left,seg_right,score_left,score_right,operator,joy_left,joy_right,selector);
+ input selector;
+ input [8:0]joy_left;
+ input [8:0]joy_right;
+ output [4:0]score_right;
+ output [4:0]score_left;
+ output [6:0]seg_right;
+ output [6:0]seg_left;
+ output [3:0]operator;
+wire trigger;
+ wire [3:0]state;
+ state_counter state_c(state,trigger);
+ wire [3:0]num_left;
+ wire [3:0]num_right;
+ question_show qs(num_left,num_right,operator,selector,state);
+ sevenseg segL(seg_left,num_left);
+ sevenseg segR(seg_right,num_right);
+
+ wire scoreL_trig,scoreR_trig;
+ score check1(scoreL_trig,scoreR_trig,trigger,joy_left,joy_right,state,selector);
+
+ score_counter scL(score_left,scoreL_trig);
+ score_counter scR(score_right,scoreR_trig);
+
+
+
 
 endmodule
 
@@ -182,7 +201,7 @@ module question_show(num_left,num_right,operater,switch,state);
 end
 endmodule
 
-module score(score_left,score_right,selector,trigger,joy_left,joy_right,state,selector);
+module score(score_left,score_right,trigger,joy_left,joy_right,state,selector);
   input [3:0]state;
   input selector;
   input [8:0]joy_left;
