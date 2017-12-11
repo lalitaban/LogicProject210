@@ -39,6 +39,16 @@ module score_counter(score_out,trigger);//นับคะแนน
   input trigger;
   output [4:0]score_out;
   reg [4:0]score_out;
+  always @ (posedge trigger) begin
+    case(score_out)
+      0'b00000: score_out = 0'b00001;
+      0'b00001: score_out = 0'b00011;
+      0'b00011: score_out = 0'b00111;
+      0'b00111: score_out = 0'b01111;
+      0'b01111: score_out = 0'b11111;
+      default: score_out = 0'b00000;
+    endcase
+    end
 endmodule
 
 module state_counter(state, trigger); //นับstate
@@ -185,5 +195,299 @@ module score(score_left,score_right,selector,trigger,joy_left,joy_right,state,se
 
   or orjoy_left(joy_left_status,joy_left[0],joy_left[1],joy_left[2],joy_left[3],joy_left[4],joy_left[5],joy_left[6],joy_left[7],joy_left[8]);
   or orjoy_right(joy_right_status,joy_right[0],joy_right[1],joy_right[2],joy_right[3],joy_right[4],joy_right[5],joy_right[6],joy_right[7],joy_right[8]);
+  always @ ( 1 ) begin
+    if (joy_left_status == 1) begin
+      if(selector == 0) begin //ans 1 left
+        if (joy_left == 9'b000001000 && state == 0) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000100000 && state == 1) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b001000000 && state == 2) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b010000000 && state == 3) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b100000000 && state == 4) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000000100 && state == 5) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b100000000 && state == 6) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000000001 && state == 7) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000000010 && state == 8) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+          trigger = 0;
+          score_left = 0;
+          score_right = 0;
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+
+
+
+      end
+      else begin
+
+      if(selector == 1) begin //ans 2 left
+        if (joy_left == 9'b000001000 && state == 0) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000100000 && state == 1) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b001000000 && state == 2) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b010000000 && state == 3) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b100000000 && state == 4) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000000100 && state == 5) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b100000000 && state == 6) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000000001 && state == 7) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+        if (joy_left == 9'b000000010 && state == 8) begin
+          trigger = 1;
+          score_left = 1;
+          score_right = 0;
+        end
+        else begin
+          trigger = 0;
+          score_left = 0;
+          score_right = 0;
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+
+      end
+    end
+
+    if (joy_right_status == 1) begin
+      if(selector == 0) begin //ans 1 right
+      if (joy_right == 9'b000001000 && state == 0) begin
+        trigger = 1;
+        score_left = 0;
+        score_right = 1;
+      end
+        else begin
+        if (joy_right == 9'b000100000 && state == 1) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b001000000 && state == 2) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b010000000 && state == 3) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b100000000 && state == 4) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b000000100 && state == 5) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b100000000 && state == 6) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b000000001 && state == 7) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b000000010 && state == 8) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+          trigger = 0;
+          score_left = 0;
+          score_right = 0;
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+
+
+      end
+      else begin
+
+      if(selector == 1) begin //ans 2 right
+      if (joy_right == 9'b000001000 && state == 0) begin
+        trigger = 1;
+        score_left = 0;
+        score_right = 1;
+      end
+        else begin
+        if (joy_right == 9'b000100000 && state == 1) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b001000000 && state == 2) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b010000000 && state == 3) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b100000000 && state == 4) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b000000100 && state == 5) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b100000000 && state == 6) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b000000001 && state == 7) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+        if (joy_right == 9'b000000010 && state == 8) begin
+          trigger = 1;
+          score_left = 0;
+          score_right = 1;
+        end
+        else begin
+          trigger = 0;
+          score_left = 0;
+          score_right = 0;
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+        end
+
+
+      end
+
+      end
+    end
+  end
+  end
 
 endmodule
